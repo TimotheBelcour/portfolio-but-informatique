@@ -5,6 +5,7 @@ import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
+import ProjectDetail from './pages/ProjectDetail'
 import CompetencePage from './pages/competences/CompetencePage'
 import { competences } from './data/competences'
 
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
           {competences.map((c) => (
             <Route
               key={c.slug}
