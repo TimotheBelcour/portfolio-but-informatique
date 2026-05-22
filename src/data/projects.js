@@ -2,6 +2,8 @@ export const projects = [
   {
     id: 1,
     slug: 'votendo',
+    year: '2024',
+    type: 'Web',
     title: 'Votendo',
     description:
       "Plateforme web complète de vote de jeux vidéo, développée en PHP/MySQL. Les utilisateurs s'inscrivent, votent pour leurs jeux favoris et consultent les classements en temps réel.",
@@ -26,6 +28,8 @@ export const projects = [
   {
     id: 2,
     slug: 'flutter-films',
+    year: '2024',
+    type: 'Mobile',
     title: 'Flutter Films',
     description:
       "Application mobile Android/iOS développée avec Flutter, permettant de parcourir des films, des acteurs et leurs notes, en consommant une API REST externe.",
@@ -44,6 +48,8 @@ export const projects = [
   {
     id: 3,
     slug: 'docker-api',
+    year: '2025',
+    type: 'DevOps',
     title: 'Docker API',
     description:
       "Déploiement et configuration d'une API REST dans un environnement conteneurisé Docker, testée et documentée avec Postman.",
@@ -62,6 +68,8 @@ export const projects = [
   {
     id: 4,
     slug: 'vr-ar',
+    year: '2025',
+    type: 'Recherche',
     title: 'VR/AR Research',
     description:
       "Travail de recherche approfondi sur les technologies de réalité virtuelle et augmentée : état de l'art, cas d'usage professionnels et présentation orale devant la promotion.",
