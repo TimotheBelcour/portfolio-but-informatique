@@ -77,7 +77,7 @@ export default function Navbar() {
             </button>
 
             {competencesOpen && (
-              <div className="absolute top-8 right-0 w-56 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl py-2 z-50">
+              <div className="dropdown-enter absolute top-8 right-0 w-56 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl py-2 z-50">
                 {competences.map((c) => (
                   <NavLink
                     key={c.slug}
@@ -118,7 +118,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-slate-950 border-t border-slate-800 px-6 py-5 flex flex-col gap-4">
+        <div className="mobile-menu-enter md:hidden bg-slate-950 border-t border-slate-800 px-6 py-5 flex flex-col gap-4">
           <NavLink to="/" className={navLinkClass} end onClick={() => setMobileOpen(false)}>
             Accueil
           </NavLink>

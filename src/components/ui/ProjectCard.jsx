@@ -8,7 +8,7 @@ export default function ProjectCard({ project }) {
   )
 
   return (
-    <article className="group flex flex-col bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-violet-500/25 hover:shadow-[0_8px_40px_rgba(139,92,246,0.13)] transition-all duration-300">
+    <article className="group flex flex-col h-full bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-violet-500/25 hover:shadow-[0_8px_40px_rgba(139,92,246,0.13)] hover:-translate-y-1 transition-all duration-300">
 
       {/* Image */}
       <div className="relative aspect-video bg-slate-800 overflow-hidden">

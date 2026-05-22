@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { competences } from '../data/competences'
+import Reveal from '../components/ui/Reveal'
 
 /* ── Constantes ────────────────────────────────────────────── */
 
@@ -59,7 +60,7 @@ export default function Home() {
       {/* ════ Hero ════════════════════════════════════════════ */}
       <section className="relative">
 
-        {/* Glow ambiant dual — violet gauche + bleu haut-droit */}
+        {/* Glow ambiant dual */}
         <div
           className="absolute pointer-events-none"
           style={{
@@ -76,13 +77,11 @@ export default function Home() {
           {/* ── Colonne texte ─────────────────────────────────── */}
           <div className="flex-1 min-w-0 space-y-7">
 
-            {/* Pill statut */}
             <div className="fade-in inline-flex items-center gap-2 text-xs text-slate-400 bg-slate-900 border border-slate-700/70 rounded-full px-4 py-1.5 w-fit">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
               BUT Informatique — 2ème année
             </div>
 
-            {/* Grand titre avec gradient blanc → violet */}
             <div className="space-y-2 fade-in-up delay-100">
               <h1
                 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.06]"
@@ -100,7 +99,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Description */}
             <p className="text-base sm:text-lg text-slate-400 leading-relaxed max-w-lg fade-in-up delay-200">
               Étudiant en 2ème année de BUT Informatique, je construis ce portfolio pour
               documenter mes apprentissages, mes projets et les compétences acquises au fil
@@ -111,9 +109,7 @@ export default function Home() {
             <div className="flex items-center fade-in-up delay-300">
               {stats.map((s, i) => (
                 <Fragment key={s.label}>
-                  {i > 0 && (
-                    <div className="self-stretch w-px bg-slate-800 mx-5 sm:mx-7" />
-                  )}
+                  {i > 0 && <div className="self-stretch w-px bg-slate-800 mx-5 sm:mx-7" />}
                   <div>
                     <div className="text-xl sm:text-2xl font-bold text-white tabular-nums leading-none">
                       {s.value}
@@ -126,21 +122,20 @@ export default function Home() {
 
             {/* Badges stack technique */}
             <div className="flex flex-wrap gap-2 fade-in-up delay-300">
-              {/* Badge spécial BUT */}
-              <span className="px-2.5 py-1 bg-violet-500/10 border border-violet-500/25 text-violet-300 text-xs rounded-lg font-semibold">
+              <span className="px-2.5 py-1 bg-violet-500/10 border border-violet-500/25 text-violet-300 text-xs rounded-lg font-semibold hover:bg-violet-500/15 hover:scale-105 transition-all duration-200 cursor-default">
                 BUT Informatique
               </span>
               {techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="px-2.5 py-1 bg-slate-900 border border-slate-700/70 text-slate-300 text-xs rounded-lg font-medium hover:border-violet-500/40 hover:text-slate-100 transition-all duration-200"
+                  className="px-2.5 py-1 bg-slate-900 border border-slate-700/70 text-slate-300 text-xs rounded-lg font-medium hover:border-violet-500/40 hover:text-slate-100 hover:scale-105 transition-all duration-200 cursor-default"
                 >
                   {tech}
                 </span>
               ))}
             </div>
 
-            {/* CTA buttons */}
+            {/* CTA */}
             <div className="flex flex-wrap gap-3 fade-in-up delay-400">
               <Link
                 to="/projects"
@@ -153,7 +148,7 @@ export default function Home() {
               </Link>
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 px-6 py-3 text-slate-200 text-sm font-medium rounded-xl border border-slate-600/70 hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-6 py-3 text-slate-200 text-sm font-medium rounded-xl border border-slate-600/70 hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-200 active:scale-[0.97]"
               >
                 À propos de moi
               </Link>
@@ -162,58 +157,14 @@ export default function Home() {
 
           {/* ── Colonne photo + cartes flottantes ─────────────── */}
           <div className="fade-in delay-500 flex-shrink-0 flex justify-center lg:justify-end mt-14 lg:mt-0">
-            {/*
-              Conteneur principal — les cartes flottantes sont
-              positionnées en absolu par rapport à ce div.
-              Le padding lg: crée l'espace pour qu'elles ne débordent pas.
-            */}
             <div className="relative lg:p-10">
 
-              {/* ── Cartes flottantes (desktop uniquement) ── */}
+              <FloatingCard className="animate-float -top-2 -left-2"   letter="⚛" label="React"   letterClass="text-sky-400"    borderColor="border-sky-500/25"    bgColor="bg-sky-500/10" />
+              <FloatingCard className="animate-float-slow -bottom-2 -right-2" letter="🐳" label="Docker"  letterClass="text-cyan-400"   borderColor="border-cyan-500/25"   bgColor="bg-cyan-500/10" />
+              <FloatingCard className="animate-float-alt -bottom-2 -left-2"  letter="P"  label="PHP"     letterClass="text-violet-400" borderColor="border-violet-500/25" bgColor="bg-violet-500/10" />
+              <FloatingCard className="animate-float-last -top-2 -right-2"   letter="F"  label="Flutter" letterClass="text-indigo-400" borderColor="border-indigo-500/25" bgColor="bg-indigo-500/10" />
 
-              {/* React — haut gauche */}
-              <FloatingCard
-                className="animate-float -top-2 -left-2"
-                letter="⚛"
-                label="React"
-                letterClass="text-sky-400"
-                borderColor="border-sky-500/25"
-                bgColor="bg-sky-500/10"
-              />
-
-              {/* Docker — bas droite */}
-              <FloatingCard
-                className="animate-float-slow -bottom-2 -right-2"
-                letter="🐳"
-                label="Docker"
-                letterClass="text-cyan-400"
-                borderColor="border-cyan-500/25"
-                bgColor="bg-cyan-500/10"
-              />
-
-              {/* PHP — bas gauche */}
-              <FloatingCard
-                className="animate-float-alt -bottom-2 -left-2"
-                letter="P"
-                label="PHP"
-                letterClass="text-violet-400"
-                borderColor="border-violet-500/25"
-                bgColor="bg-violet-500/10"
-              />
-
-              {/* Flutter — haut droite */}
-              <FloatingCard
-                className="animate-float-last -top-2 -right-2"
-                letter="F"
-                label="Flutter"
-                letterClass="text-indigo-400"
-                borderColor="border-indigo-500/25"
-                bgColor="bg-indigo-500/10"
-              />
-
-              {/* ── Photo ── */}
               <div className="relative">
-                {/* Glow conic derrière la photo */}
                 <div
                   className="absolute rounded-full pointer-events-none"
                   style={{
@@ -223,7 +174,6 @@ export default function Home() {
                     opacity: 0.52,
                   }}
                 />
-                {/* Anneau gradient */}
                 <div className="relative p-[3px] rounded-full bg-gradient-to-br from-violet-400 via-blue-400 to-violet-600">
                   <div className="w-44 h-44 sm:w-52 sm:h-52 lg:w-56 lg:h-56 rounded-full overflow-hidden bg-slate-800">
                     <img
@@ -234,7 +184,6 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                {/* Pastille online */}
                 <span className="absolute bottom-2.5 right-2.5 w-4 h-4 rounded-full bg-green-400 border-[3px] border-slate-950 shadow-[0_0_10px_rgba(74,222,128,0.7)]" />
               </div>
 
@@ -244,36 +193,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ════ Compétences (inchangé) ══════════════════════════ */}
-      <section className="space-y-8 fade-in-up delay-500">
-        <div className="space-y-1">
-          <h2 className="text-2xl font-semibold text-slate-100">6 Compétences BUT</h2>
-          <p className="text-slate-500 text-sm">Le référentiel national du BUT Informatique</p>
-        </div>
+      {/* ════ Compétences ══════════════════════════════════════ */}
+      <section className="space-y-8">
+
+        <Reveal>
+          <div className="space-y-1">
+            <h2 className="text-2xl font-semibold text-slate-100">6 Compétences BUT</h2>
+            <p className="text-slate-500 text-sm">Le référentiel national du BUT Informatique</p>
+          </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {competences.map((c) => (
-            <Link
-              key={c.slug}
-              to={`/competences/${c.slug}`}
-              className={`group p-5 bg-slate-900 border border-slate-800 rounded-xl hover:bg-slate-800/50 transition-all duration-300 ${cardHover[c.color]}`}
-            >
-              <div className="flex items-start gap-4">
-                <span className="text-2xl font-bold text-slate-800 group-hover:text-slate-700 transition-colors duration-300 font-mono leading-none mt-0.5 select-none">
-                  {String(c.id).padStart(2, '0')}
-                </span>
-                <div className="space-y-1.5 min-w-0">
-                  <h3 className={`font-semibold text-slate-200 transition-colors duration-200 ${colorAccent[c.color]}`}>
-                    {c.title}
-                  </h3>
-                  <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
-                    {c.description}
-                  </p>
+          {competences.map((c, i) => (
+            <Reveal key={c.slug} delay={i * 75} className="flex flex-col">
+              <Link
+                to={`/competences/${c.slug}`}
+                className={`group flex-1 p-5 bg-slate-900 border border-slate-800 rounded-xl hover:bg-slate-800/50 hover:-translate-y-1 transition-all duration-300 ${cardHover[c.color]}`}
+              >
+                <div className="flex items-start gap-4">
+                  <span className="text-2xl font-bold text-slate-800 group-hover:text-slate-700 transition-colors duration-300 font-mono leading-none mt-0.5 select-none">
+                    {String(c.id).padStart(2, '0')}
+                  </span>
+                  <div className="space-y-1.5 min-w-0">
+                    <h3 className={`font-semibold text-slate-200 transition-colors duration-200 ${colorAccent[c.color]}`}>
+                      {c.title}
+                    </h3>
+                    <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                      {c.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </Reveal>
           ))}
         </div>
+
       </section>
 
     </div>
