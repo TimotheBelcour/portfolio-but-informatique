@@ -13,6 +13,13 @@ export const competences = [
       'Faire des essais et évaluer leurs résultats',
       'Développer des interfaces utilisateurs',
     ],
+    apprentissages: [
+      "Concevoir et développer une application web complète en PHP/MySQL depuis les spécifications",
+      "Intégrer une API REST externe dans une application mobile Flutter avec gestion asynchrone",
+      "Structurer un projet selon une architecture MVC et séparer les responsabilités",
+      "Gérer l'authentification et les sessions utilisateurs côté serveur avec hachage sécurisé",
+    ],
+    niveauScore: 3,
   },
   {
     id: 2,
@@ -28,6 +35,13 @@ export const competences = [
       'Formaliser et mettre en œuvre des outils mathématiques',
       'Évaluer la performance des programmes',
     ],
+    apprentissages: [
+      "Analyser la complexité algorithmique de solutions et identifier les goulets d'étranglement",
+      "Comparer des algorithmes sur des cas concrets et justifier le choix de l'un d'eux",
+      "Optimiser la gestion asynchrone des requêtes réseau avec Future et async/await",
+      "Évaluer les performances d'un programme à l'aide de métriques concrètes",
+    ],
+    niveauScore: 2,
   },
   {
     id: 3,
@@ -43,6 +57,13 @@ export const competences = [
       "Installer et configurer un système d'exploitation",
       'Configurer un réseau informatique',
     ],
+    apprentissages: [
+      "Installer et configurer un environnement Linux en ligne de commande",
+      "Conteneuriser une application avec Docker et rédiger un Dockerfile",
+      "Orchestrer des services multi-conteneurs avec Docker Compose",
+      "Exposer et sécuriser des ports applicatifs dans un environnement réseau",
+    ],
+    niveauScore: 3,
   },
   {
     id: 4,
@@ -58,6 +79,13 @@ export const competences = [
       'Concevoir une base de données',
       'Assurer la confidentialité des données',
     ],
+    apprentissages: [
+      "Concevoir un schéma entité-relation adapté aux besoins d'une application",
+      "Rédiger des requêtes SQL avec jointures, agrégats et sous-requêtes",
+      "Assurer la sécurité des données : droits, injection SQL, confidentialité",
+      "Mettre à jour et maintenir une base de données applicative en conditions réelles",
+    ],
+    niveauScore: 3,
   },
   {
     id: 5,
@@ -73,6 +101,13 @@ export const competences = [
       'Identifier les acteurs et leurs rôles',
       'Planifier les activités',
     ],
+    apprentissages: [
+      "Identifier et formaliser les besoins d'un projet informatique à partir du cahier des charges",
+      "Planifier les étapes et les livrables en tenant compte des contraintes de temps",
+      "Réaliser un support de présentation professionnel et structuré pour un projet",
+      "Présenter et défendre un travail à l'oral devant un jury ou une promotion",
+    ],
+    niveauScore: 2,
   },
   {
     id: 6,
@@ -88,5 +123,12 @@ export const competences = [
       'Agir dans le respect et la confiance',
       'Rendre compte de son activité',
     ],
+    apprentissages: [
+      "Répartir les rôles et les responsabilités au sein d'une équipe projet",
+      "Utiliser des outils de versioning collaboratif (Git) pour travailler en parallèle",
+      "Communiquer régulièrement sur l'avancement et les points bloquants",
+      "Rendre compte de son travail de manière claire, structurée et synthétique",
+    ],
+    niveauScore: 2,
   },
 ]
