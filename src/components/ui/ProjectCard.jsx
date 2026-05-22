@@ -8,28 +8,34 @@ export default function ProjectCard({ project }) {
   )
 
   return (
-    <article className="group flex flex-col bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-slate-700 transition-all duration-200">
+    <article className="group flex flex-col bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-violet-500/25 hover:shadow-[0_8px_40px_rgba(139,92,246,0.13)] transition-all duration-300">
+
       {/* Image */}
       <div className="relative aspect-video bg-slate-800 overflow-hidden">
         <img
           src={project.image}
           alt={`Capture d'écran du projet ${project.title}`}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
+        {/* Overlay gradient renforcé en bas */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
+
         {/* Badge statut */}
-        <span className="absolute top-3 right-3 text-xs text-green-400 bg-slate-950/80 border border-green-400/30 px-2.5 py-0.5 rounded-full font-medium backdrop-blur-sm">
+        <span className="absolute top-3 right-3 text-xs text-green-400 bg-slate-950/85 border border-green-400/25 px-2.5 py-0.5 rounded-full font-medium backdrop-blur-sm">
           {project.status}
         </span>
       </div>
 
       {/* Contenu */}
       <div className="flex flex-col flex-1 p-5 space-y-4">
-        <h2 className="text-lg font-semibold text-slate-100 group-hover:text-violet-400 transition-colors duration-200">
+
+        {/* Titre */}
+        <h2 className="text-lg font-semibold text-slate-100 group-hover:text-violet-300 transition-colors duration-200 leading-snug">
           {project.title}
         </h2>
 
+        {/* Description */}
         <p className="text-sm text-slate-400 leading-relaxed">
           {project.description}
         </p>
@@ -52,7 +58,7 @@ export default function ProjectCard({ project }) {
           ))}
         </ul>
 
-        {/* Tags */}
+        {/* Tags technologies */}
         <div className="flex flex-wrap gap-1.5">
           {project.tags.map((tag) => (
             <Badge key={tag} color="slate">
@@ -63,13 +69,14 @@ export default function ProjectCard({ project }) {
 
         {/* Pied de carte */}
         <div className="flex items-center justify-between pt-3 border-t border-slate-800 mt-auto">
-          {/* Compétences */}
+
+          {/* Compétences liées */}
           <div className="flex flex-wrap gap-x-2 gap-y-1">
             {linkedCompetences.map((c) => (
               <Link
                 key={c.slug}
                 to={`/competences/${c.slug}`}
-                className="text-xs text-violet-400 hover:text-violet-300 transition-colors font-medium"
+                className="text-xs text-violet-400/80 hover:text-violet-300 transition-colors duration-150 font-medium"
                 onClick={(e) => e.stopPropagation()}
               >
                 {c.title}
@@ -80,11 +87,11 @@ export default function ProjectCard({ project }) {
           {/* Bouton détail */}
           <Link
             to={`/projects/${project.slug}`}
-            className="shrink-0 inline-flex items-center gap-1 text-xs text-slate-400 hover:text-slate-100 transition-colors font-medium group/btn"
+            className="shrink-0 inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-violet-300 transition-colors duration-200 font-medium group/btn"
           >
             Voir le détail
             <svg
-              className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform"
+              className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform duration-200"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
