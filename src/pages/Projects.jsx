@@ -4,7 +4,7 @@ import Reveal from '../components/ui/Reveal'
 
 export default function Projects() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16 space-y-12">
+    <div className="max-w-5xl mx-auto px-6 py-10 sm:py-16 space-y-8 sm:space-y-12">
 
       {/* Header */}
       <Reveal as="section" className="space-y-3">

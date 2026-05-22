@@ -119,7 +119,7 @@ function ProfileCard() {
 
 export default function About() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16 space-y-16">
+    <div className="max-w-5xl mx-auto px-6 py-10 sm:py-16 space-y-10 sm:space-y-16">
 
       {/* Header */}
       <Reveal as="section" className="space-y-3">
@@ -127,7 +127,7 @@ export default function About() {
         <p className="text-slate-500 text-lg">Mon parcours et mon profil</p>
       </Reveal>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
 
         {/* Sidebar — fadeOnly pour préserver le comportement sticky */}
         <Reveal as="aside" className="relative" delay={100} fadeOnly>

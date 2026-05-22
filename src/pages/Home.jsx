@@ -55,7 +55,7 @@ function FloatingCard({ className, letter, label, letterClass, borderColor, bgCo
 
 export default function Home() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-20 space-y-32">
+    <div className="max-w-5xl mx-auto px-6 py-10 sm:py-20 space-y-16 sm:space-y-28 lg:space-y-32">
 
       {/* ════ Hero ════════════════════════════════════════════ */}
       <section className="relative">
@@ -84,7 +84,7 @@ export default function Home() {
 
             <div className="space-y-2 fade-in-up delay-100">
               <h1
-                className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.06]"
+                className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.06]"
                 style={{
                   background: 'linear-gradient(to right, #ffffff 0%, #e2e8f0 35%, #c4b5fd 68%, #8b5cf6 100%)',
                   WebkitBackgroundClip: 'text',
@@ -94,12 +94,12 @@ export default function Home() {
               >
                 Timothé<br />Belcour
               </h1>
-              <p className="text-xl sm:text-2xl font-medium text-violet-400 tracking-wide">
+              <p className="text-lg sm:text-2xl font-medium text-violet-400 tracking-wide">
                 Développeur en formation
               </p>
             </div>
 
-            <p className="text-base sm:text-lg text-slate-400 leading-relaxed max-w-lg fade-in-up delay-200">
+            <p className="text-sm sm:text-base lg:text-lg text-slate-400 leading-relaxed max-w-lg fade-in-up delay-200">
               Étudiant en 2ème année de BUT Informatique, je construis ce portfolio pour
               documenter mes apprentissages, mes projets et les compétences acquises au fil
               de ma formation.
@@ -109,7 +109,7 @@ export default function Home() {
             <div className="flex items-center fade-in-up delay-300">
               {stats.map((s, i) => (
                 <Fragment key={s.label}>
-                  {i > 0 && <div className="self-stretch w-px bg-slate-800 mx-5 sm:mx-7" />}
+                  {i > 0 && <div className="self-stretch w-px bg-slate-800 mx-3 sm:mx-6" />}
                   <div>
                     <div className="text-xl sm:text-2xl font-bold text-white tabular-nums leading-none">
                       {s.value}

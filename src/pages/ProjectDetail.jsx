@@ -110,7 +110,7 @@ export default function ProjectDetail() {
   const hasGallery  = project.gallery && project.gallery.length > 1
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-12 space-y-14">
+    <div className="max-w-5xl mx-auto px-6 py-8 sm:py-12 space-y-10 sm:space-y-14">
 
       {/* ════ Hero ══════════════════════════════════════════ */}
       <Reveal as="header" className="relative">
@@ -166,7 +166,7 @@ export default function ProjectDetail() {
             {project.title}
           </h1>
 
-          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl">
+          <p className="text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
             {project.description}
           </p>
         </div>
@@ -233,7 +233,7 @@ export default function ProjectDetail() {
 
         {/* ── Fonctionnalités (col 1-2) ── */}
         <Reveal className="lg:col-span-2">
-          <div className="h-full bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-5">
+          <div className="h-full bg-slate-900 border border-slate-800 rounded-xl p-4 sm:p-6 space-y-5">
             <div className="flex items-center gap-2.5">
               <div className="w-7 h-7 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center flex-shrink-0">
                 <svg className="w-4 h-4 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -265,7 +265,7 @@ export default function ProjectDetail() {
 
           {/* Technologies */}
           <Reveal delay={100}>
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-4">
+            <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 sm:p-5 space-y-4">
               <div className="flex items-center gap-2">
                 <div className="w-6 h-6 rounded-md bg-slate-800 flex items-center justify-center flex-shrink-0">
                   <svg className="w-3.5 h-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -286,7 +286,7 @@ export default function ProjectDetail() {
 
           {/* Compétences BUT */}
           <Reveal delay={180}>
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-4">
+            <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 sm:p-5 space-y-4">
               <div className="flex items-center gap-2">
                 <div className="w-6 h-6 rounded-md bg-slate-800 flex items-center justify-center flex-shrink-0">
                   <svg className="w-3.5 h-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

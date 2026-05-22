@@ -100,7 +100,7 @@ export default function CompetencePage({ competence }) {
   const apprentissages = competence.apprentissages ?? []
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16 space-y-12">
+    <div className="max-w-5xl mx-auto px-6 py-10 sm:py-16 space-y-8 sm:space-y-12">
 
       {/* ── Hero ── */}
       <Reveal as="section" className="space-y-5">
@@ -121,12 +121,12 @@ export default function CompetencePage({ competence }) {
         </span>
 
         {/* Title */}
-        <h1 className="text-4xl font-bold text-slate-100 leading-tight">
+        <h1 className="text-3xl sm:text-4xl font-bold text-slate-100 leading-tight">
           {competence.fullTitle}
         </h1>
 
         {/* Description */}
-        <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
+        <p className="text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed">
           {competence.description}
         </p>
 
@@ -151,7 +151,7 @@ export default function CompetencePage({ competence }) {
       <div className={`h-px w-full bg-gradient-to-r from-transparent ${colors.separator} to-transparent`} />
 
       {/* ── Main grid ── */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
 
         {/* Left — main content */}
         <div className="lg:col-span-2 space-y-6">
@@ -159,7 +159,7 @@ export default function CompetencePage({ competence }) {
           {/* Acquis d'apprentissage */}
           {apprentissages.length > 0 && (
             <Reveal delay={80}>
-              <div className={`p-6 rounded-xl border ${colors.border} ${colors.bg} space-y-4`}>
+              <div className={`p-4 sm:p-6 rounded-xl border ${colors.border} ${colors.bg} space-y-4`}>
                 <div className="flex items-start gap-3">
                   <div className={`p-2 rounded-lg border shrink-0 ${colors.icon}`}>
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -185,7 +185,7 @@ export default function CompetencePage({ competence }) {
 
           {/* Critères d'évaluation BUT */}
           <Reveal delay={160}>
-            <div className="p-6 rounded-xl border border-slate-800 bg-slate-900/50 space-y-4">
+            <div className="p-4 sm:p-6 rounded-xl border border-slate-800 bg-slate-900/50 space-y-4">
               <div className="flex items-start gap-3">
                 <div className="p-2 rounded-lg border border-slate-700 bg-slate-800/60 text-slate-400 shrink-0">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -232,7 +232,7 @@ export default function CompetencePage({ competence }) {
                       to={`/projects/${project.slug}`}
                       className="flex items-stretch bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-slate-700 hover:-translate-y-0.5 transition-all duration-200 group"
                     >
-                      <div className="w-28 shrink-0 relative overflow-hidden">
+                      <div className="w-20 sm:w-28 shrink-0 relative overflow-hidden">
                         <img
                           src={project.image}
                           alt={project.title}
@@ -263,7 +263,7 @@ export default function CompetencePage({ competence }) {
 
           {/* Analyse réflexive */}
           <Reveal delay={320}>
-            <div className="p-6 rounded-xl border border-slate-800 bg-slate-900/30 space-y-4">
+            <div className="p-4 sm:p-6 rounded-xl border border-slate-800 bg-slate-900/30 space-y-4">
               <div className="flex items-start gap-3">
                 <div className="p-2 rounded-lg border border-slate-700 bg-slate-800/60 text-slate-400 shrink-0">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -290,7 +290,7 @@ export default function CompetencePage({ competence }) {
         <Reveal as="aside" className="space-y-5" delay={100}>
 
           {/* Auto-évaluation */}
-          <div className={`p-5 rounded-xl border ${colors.border} ${colors.bg} space-y-5`}>
+          <div className={`p-4 sm:p-5 rounded-xl border ${colors.border} ${colors.bg} space-y-5`}>
             <div>
               <h3 className={`text-xs font-semibold uppercase tracking-widest ${colors.accent}`}>Auto-évaluation</h3>
               <p className="text-xs text-slate-500 mt-1">Niveau estimé en fin de semestre</p>
@@ -340,7 +340,7 @@ export default function CompetencePage({ competence }) {
           </div>
 
           {/* Informations BUT */}
-          <div className="p-5 rounded-xl border border-slate-800 bg-slate-900/50 space-y-3">
+          <div className="p-4 sm:p-5 rounded-xl border border-slate-800 bg-slate-900/50 space-y-3">
             <h3 className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Informations</h3>
             <dl className="space-y-2.5">
               <div className="flex items-center justify-between text-sm">
