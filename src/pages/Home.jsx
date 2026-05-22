@@ -1,5 +1,8 @@
+import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { competences } from '../data/competences'
+
+/* ── Constantes ────────────────────────────────────────────── */
 
 const colorAccent = {
   violet: 'group-hover:text-violet-400',
@@ -19,26 +22,59 @@ const cardHover = {
   pink:   'hover:border-pink-500/30   hover:shadow-[0_4px_28px_rgba(236,72,153,0.12)]',
 }
 
+const stats = [
+  { value: '4',    label: 'Projets réalisés'  },
+  { value: '6',    label: 'Compétences BUT'   },
+  { value: '2ème', label: 'année BUT Info'    },
+]
+
+const techStack = ['React', 'PHP', 'Docker', 'Flutter', 'Python', 'SQL']
+
+/* ── Carte flottante autour de la photo (desktop only) ─────── */
+
+function FloatingCard({ className, letter, label, letterClass, borderColor, bgColor }) {
+  return (
+    <div
+      className={`
+        absolute hidden lg:flex items-center gap-2 px-3 py-2
+        bg-slate-950/90 border ${borderColor} rounded-xl
+        backdrop-blur-sm shadow-xl shadow-black/30
+        ${className}
+      `}
+    >
+      <div className={`w-6 h-6 rounded-md ${bgColor} flex items-center justify-center flex-shrink-0`}>
+        <span className={`text-[11px] font-bold ${letterClass}`}>{letter}</span>
+      </div>
+      <span className="text-xs text-slate-200 font-semibold whitespace-nowrap">{label}</span>
+    </div>
+  )
+}
+
+/* ── Page ───────────────────────────────────────────────────── */
+
 export default function Home() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-20 space-y-32">
 
-      {/* ── Hero ─────────────────────────────────────────────── */}
+      {/* ════ Hero ════════════════════════════════════════════ */}
       <section className="relative">
-        {/* Glow ambiant derrière le hero */}
+
+        {/* Glow ambiant dual — violet gauche + bleu haut-droit */}
         <div
           className="absolute pointer-events-none"
           style={{
-            inset: '-80px -60px',
-            background:
-              'radial-gradient(ellipse 65% 55% at 20% 50%, rgba(139,92,246,0.13) 0%, rgba(96,165,250,0.06) 55%, transparent 80%)',
+            inset: '-100px -80px',
+            background: [
+              'radial-gradient(ellipse 60% 55% at 15% 55%, rgba(139,92,246,0.18) 0%, transparent 70%)',
+              'radial-gradient(ellipse 45% 40% at 82% 15%, rgba(96,165,250,0.10) 0%, transparent 65%)',
+            ].join(', '),
           }}
         />
 
-        <div className="relative flex flex-col lg:flex-row lg:items-center lg:gap-16">
+        <div className="relative flex flex-col lg:flex-row lg:items-center lg:gap-12">
 
-          {/* Colonne texte */}
-          <div className="flex-1 space-y-8">
+          {/* ── Colonne texte ─────────────────────────────────── */}
+          <div className="flex-1 min-w-0 space-y-7">
 
             {/* Pill statut */}
             <div className="fade-in inline-flex items-center gap-2 text-xs text-slate-400 bg-slate-900 border border-slate-700/70 rounded-full px-4 py-1.5 w-fit">
@@ -46,36 +82,69 @@ export default function Home() {
               BUT Informatique — 2ème année
             </div>
 
-            {/* Titre + sous-titre */}
-            <div className="space-y-3 fade-in-up delay-100">
+            {/* Grand titre avec gradient blanc → violet */}
+            <div className="space-y-2 fade-in-up delay-100">
               <h1
-                className="text-5xl sm:text-6xl font-bold leading-tight tracking-tight"
+                className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.06]"
                 style={{
-                  background: 'linear-gradient(135deg, #f8fafc 0%, #ffffff 40%, #ddd6fe 100%)',
+                  background: 'linear-gradient(to right, #ffffff 0%, #e2e8f0 35%, #c4b5fd 68%, #8b5cf6 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
                 }}
               >
-                Timothé Belcour
+                Timothé<br />Belcour
               </h1>
-              <p className="text-2xl sm:text-3xl font-medium text-violet-400">
+              <p className="text-xl sm:text-2xl font-medium text-violet-400 tracking-wide">
                 Développeur en formation
               </p>
             </div>
 
             {/* Description */}
-            <p className="text-lg text-slate-400 max-w-lg leading-relaxed fade-in-up delay-200">
+            <p className="text-base sm:text-lg text-slate-400 leading-relaxed max-w-lg fade-in-up delay-200">
               Étudiant en 2ème année de BUT Informatique, je construis ce portfolio pour
               documenter mes apprentissages, mes projets et les compétences acquises au fil
               de ma formation.
             </p>
 
-            {/* CTA */}
-            <div className="flex flex-wrap gap-3 fade-in-up delay-300">
+            {/* Statistiques rapides */}
+            <div className="flex items-center fade-in-up delay-300">
+              {stats.map((s, i) => (
+                <Fragment key={s.label}>
+                  {i > 0 && (
+                    <div className="self-stretch w-px bg-slate-800 mx-5 sm:mx-7" />
+                  )}
+                  <div>
+                    <div className="text-xl sm:text-2xl font-bold text-white tabular-nums leading-none">
+                      {s.value}
+                    </div>
+                    <div className="text-xs text-slate-500 mt-1 whitespace-nowrap">{s.label}</div>
+                  </div>
+                </Fragment>
+              ))}
+            </div>
+
+            {/* Badges stack technique */}
+            <div className="flex flex-wrap gap-2 fade-in-up delay-300">
+              {/* Badge spécial BUT */}
+              <span className="px-2.5 py-1 bg-violet-500/10 border border-violet-500/25 text-violet-300 text-xs rounded-lg font-semibold">
+                BUT Informatique
+              </span>
+              {techStack.map((tech) => (
+                <span
+                  key={tech}
+                  className="px-2.5 py-1 bg-slate-900 border border-slate-700/70 text-slate-300 text-xs rounded-lg font-medium hover:border-violet-500/40 hover:text-slate-100 transition-all duration-200"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {/* CTA buttons */}
+            <div className="flex flex-wrap gap-3 fade-in-up delay-400">
               <Link
                 to="/projects"
-                className="btn-glow inline-flex items-center gap-2 px-5 py-2.5 bg-violet-600 hover:bg-violet-500 text-white text-sm font-medium rounded-lg"
+                className="btn-glow inline-flex items-center gap-2.5 px-6 py-3 bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold rounded-xl transition-colors duration-200"
               >
                 Voir mes projets
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -84,47 +153,98 @@ export default function Home() {
               </Link>
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-slate-100 text-sm font-medium rounded-lg border border-slate-700 hover:border-slate-600 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-6 py-3 text-slate-200 text-sm font-medium rounded-xl border border-slate-600/70 hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-200"
               >
                 À propos de moi
               </Link>
             </div>
           </div>
 
-          {/* Photo de profil */}
-          <div className="fade-in delay-400 flex-shrink-0 flex justify-center lg:justify-end mt-10 lg:mt-0">
-            <div className="relative">
-              {/* Glow conic derrière la photo */}
-              <div
-                className="absolute rounded-full pointer-events-none"
-                style={{
-                  inset: '-18px',
-                  background:
-                    'conic-gradient(from 180deg at 50% 50%, rgba(139,92,246,0.45) 0deg, rgba(96,165,250,0.3) 120deg, rgba(167,139,250,0.4) 240deg, rgba(139,92,246,0.45) 360deg)',
-                  filter: 'blur(22px)',
-                  opacity: 0.55,
-                }}
+          {/* ── Colonne photo + cartes flottantes ─────────────── */}
+          <div className="fade-in delay-500 flex-shrink-0 flex justify-center lg:justify-end mt-14 lg:mt-0">
+            {/*
+              Conteneur principal — les cartes flottantes sont
+              positionnées en absolu par rapport à ce div.
+              Le padding lg: crée l'espace pour qu'elles ne débordent pas.
+            */}
+            <div className="relative lg:p-10">
+
+              {/* ── Cartes flottantes (desktop uniquement) ── */}
+
+              {/* React — haut gauche */}
+              <FloatingCard
+                className="animate-float -top-2 -left-2"
+                letter="⚛"
+                label="React"
+                letterClass="text-sky-400"
+                borderColor="border-sky-500/25"
+                bgColor="bg-sky-500/10"
               />
-              {/* Anneau gradient */}
-              <div className="relative p-[2.5px] rounded-full bg-gradient-to-br from-violet-400 via-blue-400 to-violet-600">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden bg-slate-800">
-                  <img
-                    src="/images/profile.png"
-                    alt="Timothé Belcour"
-                    className="w-full h-full object-cover"
-                    draggable={false}
-                  />
+
+              {/* Docker — bas droite */}
+              <FloatingCard
+                className="animate-float-slow -bottom-2 -right-2"
+                letter="🐳"
+                label="Docker"
+                letterClass="text-cyan-400"
+                borderColor="border-cyan-500/25"
+                bgColor="bg-cyan-500/10"
+              />
+
+              {/* PHP — bas gauche */}
+              <FloatingCard
+                className="animate-float-alt -bottom-2 -left-2"
+                letter="P"
+                label="PHP"
+                letterClass="text-violet-400"
+                borderColor="border-violet-500/25"
+                bgColor="bg-violet-500/10"
+              />
+
+              {/* Flutter — haut droite */}
+              <FloatingCard
+                className="animate-float-last -top-2 -right-2"
+                letter="F"
+                label="Flutter"
+                letterClass="text-indigo-400"
+                borderColor="border-indigo-500/25"
+                bgColor="bg-indigo-500/10"
+              />
+
+              {/* ── Photo ── */}
+              <div className="relative">
+                {/* Glow conic derrière la photo */}
+                <div
+                  className="absolute rounded-full pointer-events-none"
+                  style={{
+                    inset: '-20px',
+                    background: 'conic-gradient(from 180deg at 50% 50%, rgba(139,92,246,0.5) 0deg, rgba(96,165,250,0.32) 120deg, rgba(167,139,250,0.45) 240deg, rgba(139,92,246,0.5) 360deg)',
+                    filter: 'blur(26px)',
+                    opacity: 0.52,
+                  }}
+                />
+                {/* Anneau gradient */}
+                <div className="relative p-[3px] rounded-full bg-gradient-to-br from-violet-400 via-blue-400 to-violet-600">
+                  <div className="w-44 h-44 sm:w-52 sm:h-52 lg:w-56 lg:h-56 rounded-full overflow-hidden bg-slate-800">
+                    <img
+                      src="/images/profile.png"
+                      alt="Timothé Belcour"
+                      className="w-full h-full object-cover"
+                      draggable={false}
+                    />
+                  </div>
                 </div>
+                {/* Pastille online */}
+                <span className="absolute bottom-2.5 right-2.5 w-4 h-4 rounded-full bg-green-400 border-[3px] border-slate-950 shadow-[0_0_10px_rgba(74,222,128,0.7)]" />
               </div>
-              {/* Pastille online */}
-              <span className="absolute bottom-2 right-2 w-4 h-4 rounded-full bg-green-400 border-[3px] border-slate-950 shadow-[0_0_8px_rgba(74,222,128,0.6)]" />
+
             </div>
           </div>
 
         </div>
       </section>
 
-      {/* ── Compétences ──────────────────────────────────────── */}
+      {/* ════ Compétences (inchangé) ══════════════════════════ */}
       <section className="space-y-8 fade-in-up delay-500">
         <div className="space-y-1">
           <h2 className="text-2xl font-semibold text-slate-100">6 Compétences BUT</h2>

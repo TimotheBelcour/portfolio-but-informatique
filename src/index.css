@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -60,6 +61,18 @@ body {
 .delay-400 { animation-delay: 400ms; }
 .delay-500 { animation-delay: 500ms; }
 .delay-600 { animation-delay: 600ms; }
+
+/* ─── Float animation (cartes flottantes) ────────────────── */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-6px); }
+}
+
+.animate-float      { animation: float 4s   ease-in-out 0s    infinite; }
+.animate-float-slow { animation: float 5s   ease-in-out 0.8s  infinite; }
+.animate-float-alt  { animation: float 4.5s ease-in-out 1.4s  infinite; }
+.animate-float-last { animation: float 5.5s ease-in-out 2s    infinite; }
 
 /* ─── Bouton primary avec glow violet ────────────────────── */
 
