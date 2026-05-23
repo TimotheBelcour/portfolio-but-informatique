@@ -1,23 +1,61 @@
 const techColorMap = {
-  PHP:          'violet',
-  MySQL:        'blue',
-  'HTML/CSS':   'orange',
-  HTTPS:        'green',
-  Flutter:      'violet',
-  Dart:         'blue',
-  'API REST':   'green',
-  Android:      'green',
-  Docker:       'blue',
-  Postman:      'orange',
-  Linux:        'slate',
-  VR:           'pink',
-  AR:           'pink',
-  Recherche:    'slate',
-  Présentation: 'violet',
-  Python:       'yellow',
-  React:        'blue',
-  JavaScript:   'yellow',
-  SQL:          'orange',
+  /* ── Web / Frontend ── */
+  'HTML/CSS':     'orange',
+  JavaScript:     'yellow',
+  React:          'blue',
+  'Three.js':     'blue',
+  WebGL:          'violet',
+
+  /* ── Backend ── */
+  PHP:            'violet',
+  Python:         'yellow',
+  C:              'blue',
+
+  /* ── Base de données ── */
+  MySQL:          'blue',
+  SQL:            'orange',
+
+  /* ── Mobile ── */
+  Flutter:        'violet',
+  Dart:           'blue',
+  Android:        'green',
+
+  /* ── DevOps / Infra ── */
+  Docker:         'blue',
+  Linux:          'slate',
+  Bash:           'slate',
+  Makefile:       'slate',
+  'API REST':     'green',
+  Postman:        'orange',
+
+  /* ── Réseau / Sécurité ── */
+  HTTPS:          'green',
+  OpenSSL:        'green',
+  Apache:         'orange',
+  SSH:            'green',
+  Réseau:         'blue',
+  VirtualBox:     'orange',
+
+  /* ── Algorithmique / Maths ── */
+  Algorithmes:    'blue',
+  Mathématiques:  'blue',
+  Cryptographie:  'violet',
+  Probabilités:   'orange',
+  Statistiques:   'orange',
+  Matplotlib:     'blue',
+  Optimisation:   'green',
+  Automates:      'violet',
+  Théorie:        'slate',
+
+  /* ── Audit / Performance ── */
+  Audit:          'orange',
+  Performance:    'green',
+
+  /* ── Recherche / Communication ── */
+  VR:             'pink',
+  AR:             'pink',
+  Recherche:      'slate',
+  Présentation:   'violet',
 }
 
 const colorStyles = {

@@ -49,11 +49,18 @@ export default function ProjectCard({ project }) {
           )}
         </div>
 
-        {/* Statut haut droite */}
-        <span className="absolute top-3 right-3 inline-flex items-center gap-1 text-xs text-green-400 bg-slate-950/85 border border-green-400/25 px-2.5 py-0.5 rounded-full font-medium backdrop-blur-sm">
-          <span className="w-1 h-1 rounded-full bg-green-400" />
-          {project.status}
-        </span>
+        {/* Badges haut droite : featured + statut */}
+        <div className="absolute top-3 right-3 flex items-center gap-1.5">
+          {project.featured && (
+            <span className="inline-flex items-center gap-1 text-[10px] text-amber-400 bg-slate-950/85 border border-amber-400/25 px-2 py-0.5 rounded-full font-medium backdrop-blur-sm">
+              ★ Phare
+            </span>
+          )}
+          <span className="inline-flex items-center gap-1 text-xs text-green-400 bg-slate-950/85 border border-green-400/25 px-2.5 py-0.5 rounded-full font-medium backdrop-blur-sm">
+            <span className="w-1 h-1 rounded-full bg-green-400" />
+            {project.status}
+          </span>
+        </div>
       </div>
 
       {/* Contenu */}

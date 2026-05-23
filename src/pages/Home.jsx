@@ -24,7 +24,7 @@ const cardHover = {
 }
 
 const stats = [
-  { value: '4',    label: 'Projets réalisés'  },
+  { value: '12',   label: 'Projets réalisés'  },
   { value: '6',    label: 'Compétences BUT'   },
   { value: '2ème', label: 'année BUT Info'    },
 ]
