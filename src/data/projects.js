@@ -7,14 +7,27 @@ import { imgs } from './projectImages.js'
 
 const votendoGallery = imgs(
   'votendo',
+  // ── Interface utilisateur ──────────────────────────
   'votendo-home',
-  'votendo-vote',
-  'votendo-results',
+  'votendo-https-home',
   'votendo-page-jeu',
+  'votendo-results',
+  // ── Fonctionnalités ───────────────────────────────
+  'votendo-vote',
+  // ── Conception UML / MCD / documentation ─────────
   'votendo-mcd',
   'votendo-uml-diagram',
-  'Votendo-affiche',
+  'votendo-functional-specs-1',
+  // ── Organisation projet ───────────────────────────
   'votendo-trello',
+  // ── Sécurité HTTPS / SSL ──────────────────────────
+  'apache-https-vhost',
+  'ssl-certificate-generation',
+  // ── Analyse réseau ────────────────────────────────
+  'wireshark-tls-traffic',
+  // ── Communication / anglais ───────────────────────
+  'Votendo-affiche',
+  'sae3-english-votendo-overview',
 )
 
 const sae4Gallery = imgs(
