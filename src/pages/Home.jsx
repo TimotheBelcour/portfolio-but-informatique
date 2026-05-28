@@ -100,9 +100,12 @@ export default function Home() {
             </div>
 
             <p className="text-sm sm:text-base lg:text-lg text-slate-400 leading-relaxed max-w-lg fade-in-up delay-200">
-              Étudiant en 2ème année de BUT Informatique, je construis ce portfolio pour
-              documenter mes apprentissages, mes projets et les compétences acquises au fil
-              de ma formation.
+              Étudiant à l'IUT de Saint-Dié-des-Vosges, j'ai créé ce portfolio pour présenter
+              mes projets, mes apprentissages et l'évolution de mes compétences tout au long
+              du BUT Informatique. Curieux des nouvelles technologies, particulièrement de
+              l'intelligence artificielle et de l'univers du jeu vidéo, j'apprends
+              principalement à travers la pratique et les projets concrets réalisés pendant
+              ma formation.
             </p>
 
             {/* Statistiques rapides */}

@@ -61,10 +61,6 @@ function ProfileCard() {
               <p className="text-sm text-slate-500">Étudiant BUT Informatique</p>
             </div>
 
-            <span className="inline-flex items-center gap-1.5 text-xs font-medium text-violet-300 bg-violet-500/10 border border-violet-500/25 px-3 py-1.5 rounded-full">
-              <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
-              En recherche d'alternance
-            </span>
           </div>
 
           <div className="h-px mx-5 bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
@@ -141,14 +137,25 @@ export default function About() {
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-slate-200">Présentation</h3>
               <p className="text-slate-400 leading-relaxed">
-                Étudiant en 2ème année de BUT Informatique, je me passionne pour le
-                développement logiciel et web. Ce portfolio retrace mon parcours académique
-                et mes réalisations techniques au fil de ma formation.
+                Étudiant en 2ème année de BUT Informatique à l'IUT de Saint-Dié-des-Vosges,
+                je m'intéresse particulièrement aux nouvelles technologies — intelligence
+                artificielle, développement et jeux vidéo. Ce portfolio documente mes projets
+                et mes apprentissages au fil de la formation. Je ne suis pas encore fixé sur
+                un domaine précis, mais j'explore progressivement différents domaines du
+                numérique afin de construire mon projet professionnel.
               </p>
               <p className="text-slate-400 leading-relaxed">
-                Je cherche à approfondir mes compétences en développement full-stack tout
-                en découvrant les bases de données, les systèmes, et la gestion de projet
-                agile.
+                Avant le BUT, j'ai suivi un BTS Pilotage des Procédés en alternance chez
+                Norske Skog Golbey, site historiquement spécialisé dans le papier journal
+                et aujourd'hui engagé dans la production de papier pour carton ondulé. Cette
+                expérience industrielle m'a apporté rigueur, autonomie et sens des
+                responsabilités — des réflexes que je retrouve aujourd'hui dans mes projets
+                informatiques.
+              </p>
+              <p className="text-slate-400 leading-relaxed">
+                En dehors des cours, je pratique le volley-ball en club depuis l'enfance et
+                j'ai entraîné une équipe de cadets. Cette activité m'a appris l'esprit
+                d'équipe, la régularité ainsi que la prise de responsabilités collectives.
               </p>
             </div>
           </Reveal>
