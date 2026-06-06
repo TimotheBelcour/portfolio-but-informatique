@@ -18,7 +18,7 @@ export default function ProjectCard({ project }) {
   const accentFrom = competenceColorMap[project.competences[0]] ?? 'from-violet-500/60'
 
   return (
-    <article className="group flex flex-col h-full bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-violet-500/30 hover:shadow-[0_12px_48px_rgba(139,92,246,0.15)] hover:-translate-y-1 transition-all duration-300">
+    <article className="group relative cursor-pointer flex flex-col h-full bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-violet-500/30 hover:shadow-[0_12px_48px_rgba(139,92,246,0.15)] hover:-translate-y-1 transition-all duration-300">
 
       {/* Accent line colorée selon la première compétence */}
       <div className={`h-0.5 bg-gradient-to-r ${accentFrom} to-transparent`} />
@@ -66,9 +66,15 @@ export default function ProjectCard({ project }) {
       {/* Contenu */}
       <div className="flex flex-col flex-1 p-5 gap-3">
 
-        {/* Titre */}
+        {/* Titre — lien "étiré" qui rend toute la carte cliquable */}
         <h2 className="text-lg font-bold text-slate-100 group-hover:text-violet-300 transition-colors duration-200 leading-snug">
-          {project.title}
+          <Link
+            to={`/projects/${project.slug}`}
+            className="rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-violet-500/50 after:absolute after:inset-0 after:content-['']"
+            aria-label={`Voir le projet ${project.title}`}
+          >
+            {project.title}
+          </Link>
         </h2>
 
         {/* Description */}
@@ -100,8 +106,8 @@ export default function ProjectCard({ project }) {
         {/* Footer */}
         <div className="mt-auto pt-3 border-t border-slate-800 flex items-center justify-between gap-3">
 
-          {/* Compétences liées */}
-          <div className="flex flex-wrap gap-x-2 gap-y-0.5 min-w-0">
+          {/* Compétences liées — z-10 pour rester cliquables au-dessus du lien étiré */}
+          <div className="relative z-10 flex flex-wrap gap-x-2 gap-y-0.5 min-w-0">
             {linkedCompetences.map((c) => (
               <Link
                 key={c.slug}
@@ -114,10 +120,10 @@ export default function ProjectCard({ project }) {
             ))}
           </div>
 
-          {/* CTA */}
+          {/* CTA — z-10 pour rester au-dessus du lien étiré */}
           <Link
             to={`/projects/${project.slug}`}
-            className="shrink-0 inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 bg-violet-500/10 text-violet-300 hover:bg-violet-500/20 border border-violet-500/25 hover:border-violet-500/45 rounded-lg transition-all duration-200 group/btn"
+            className="relative z-10 shrink-0 inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 bg-violet-500/10 text-violet-300 hover:bg-violet-500/20 border border-violet-500/25 hover:border-violet-500/45 rounded-lg transition-all duration-200 group/btn"
           >
             Voir le projet
             <svg

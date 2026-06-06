@@ -169,7 +169,7 @@ export default function About() {
                     <p className="font-medium text-slate-200">BUT Informatique</p>
                     <p className="text-sm text-slate-500 mt-0.5">IUT — 2ème année en cours</p>
                   </div>
-                  <span className="text-xs text-slate-600 shrink-0 font-mono mt-0.5">2024 — 2026</span>
+                  <span className="text-xs text-slate-600 shrink-0 font-mono mt-0.5">2024 — 2027</span>
                 </div>
               </div>
             </div>
