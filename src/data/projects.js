@@ -32,8 +32,10 @@ const votendoGallery = imgs(
 
 const sae4Gallery = imgs(
   'sae4-ggvote-audit',
-  'optimization-objectives',
+  'HomePageGGVoteSAE4',
+  'DockerDesktopSAAE4',
   'performance-monitoring',
+  'optimization-objectives',
   'project-estimation-part1',
   'project-estimation-part2',
 )
@@ -196,7 +198,7 @@ export const projects = [
     type: 'Audit',
     category: 'devops',
     featured: true,
-    title: 'SAE4 — GGVote Audit',
+    title: 'SAE4 — Audit et amélioration d\'une application complexe',
     description:
       "Projet de SAE4 réalisé en binôme consistant à auditer puis améliorer l'application GGVote. Le travail a porté sur la sécurité, la robustesse, l'optimisation SQL, la containerisation Docker et la maintenabilité du code.",
     image: sae4Gallery[0],
@@ -211,7 +213,7 @@ export const projects = [
       "Protection CSRF sur les formulaires sensibles",
       "Mise en place de healthchecks Docker",
     ],
-    tags: ['PHP', 'Docker', 'MariaDB', 'Sécurité', 'Audit'],
+    tags: ['PHP', 'Docker', 'MariaDB', 'SQL', 'Sécurité', 'Audit'],
     competences: ['optimiser', 'conduire', 'collaborer', 'administrer', 'gerer'],
     status: 'Terminé',
     duration: 'Semestre 4',
@@ -249,7 +251,7 @@ export const projects = [
       "Mettre en place une démarche d'amélioration continue à partir d'un audit",
     ],
     result:
-      "L'application GGVote est désormais plus sécurisée, plus maintenable et mieux supervisée. Les optimisations réalisées ont permis d'améliorer la gestion des erreurs, la sécurité de la base de données, l'organisation du code et la fiabilité de l'environnement Docker tout en conservant le comportement fonctionnel initial.",
+      "L'audit a débouché sur plusieurs améliorations techniques de GGVote : sécurité de la base de données, gestion des erreurs, organisation du code et fiabilité de l'environnement Docker. Les fonctionnalités existantes de l'application ont été conservées — le travail a surtout porté sur la qualité technique (sécurité, robustesse, maintenabilité) plutôt que sur l'ajout de nouvelles fonctionnalités.",
   },
 
   {
