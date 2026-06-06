@@ -643,13 +643,13 @@ export const projects = [
   {
     id: 10,
     slug: 'simplexe-klee-minty',
-    year: '2025',
+    year: '2026',
     type: 'Optimisation',
     category: 'algo',
     featured: false,
-    title: 'Simplexe — Klee-Minty',
+    title: 'Algorithme du Simplexe & Optimisation Linéaire',
     description:
-      "Implémentation et analyse de l'algorithme du simplexe en Python. Étude du pire cas sur le polytope de Klee-Minty, visualisation 3D du cheminement et comparaison des critères de pivot.",
+      "Projet d'optimisation linéaire et de recherche opérationnelle réalisé en Python : implémentation de l'algorithme du simplexe, analyse de sa complexité dans le pire cas sur le polytope de Klee-Minty, benchmarking des critères de pivot et visualisation 3D du cheminement de l'algorithme.",
     image: simplexeGallery[0],
     gallery: simplexeGallery,
     highlights: [
@@ -658,13 +658,13 @@ export const projects = [
       "Comparaison des critères de pivot (Bland, Dantzig, plus grand coefficient)",
       "Analyse de la complexité exponentielle sur les instances adverses",
     ],
-    tags: ['Python', 'Algorithmes', 'Mathématiques', 'Matplotlib'],
+    tags: ['Python', 'Algorithmes', 'Mathématiques', 'Matplotlib', 'NumPy', 'Recherche opérationnelle'],
     competences: ['realiser', 'optimiser'],
     status: 'Terminé',
-    duration: '2 semaines',
-    team: 'Binôme',
+    duration: 'Semestre 4',
+    team: 'Binôme (Robin Biget)',
     context:
-      "Projet d'algorithmique et d'optimisation linéaire réalisé dans le cadre du BUT Informatique. L'objectif était d'implémenter l'algorithme du simplexe et d'analyser son comportement sur le polytope de Klee-Minty, connu pour mettre en échec sa complexité polynomiale supposée.",
+      "Projet d'algorithmique et d'optimisation linéaire (recherche opérationnelle) réalisé dans le cadre du BUT Informatique en binôme avec Robin Biget. L'objectif était d'implémenter l'algorithme du simplexe en Python, puis d'analyser expérimentalement son comportement sur le polytope de Klee-Minty, une famille d'instances connue pour faire exploser sa complexité en temps exponentiel.",
     objectives: [
       "Implémenter l'algorithme du simplexe par la méthode des tableaux en Python",
       "Étudier le pire cas : le polytope de Klee-Minty et sa complexité exponentielle",
