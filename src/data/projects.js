@@ -590,13 +590,13 @@ export const projects = [
   {
     id: 9,
     slug: 'probabilites-surbooking',
-    year: '2024',
+    year: '2025',
     type: 'Probabilités',
     category: 'algo',
     featured: false,
-    title: 'Probabilités — Surbooking',
+    title: 'Probabilités & Optimisation du Surbooking',
     description:
-      "Modélisation probabiliste et simulation du problème du surbooking aérien en Python : loi binomiale, simulation Monte Carlo et visualisation Matplotlib des distributions et seuils.",
+      "Projet de modélisation probabiliste réalisé en Python autour du problème du surbooking aérien. Utilisation de lois de probabilité, simulations Monte Carlo et visualisations Matplotlib pour déterminer le nombre optimal de billets à vendre selon un niveau de risque accepté.",
     image: surBookingGallery[0],
     gallery: surBookingGallery,
     highlights: [
@@ -605,13 +605,13 @@ export const projects = [
       "Calcul du nombre optimal de billets à surréserver selon le seuil de risque",
       "Visualisation des distributions et des résultats avec Matplotlib",
     ],
-    tags: ['Python', 'Probabilités', 'Matplotlib', 'Statistiques'],
+    tags: ['Python', 'Probabilités', 'Matplotlib', 'Statistiques', 'Monte Carlo'],
     competences: ['optimiser', 'conduire'],
     status: 'Terminé',
-    duration: '2 semaines',
-    team: 'Binôme',
+    duration: 'Semestre 3',
+    team: 'Binôme (Lucas Charbonnel)',
     context:
-      "Projet de mathématiques appliquées réalisé dans le cadre du BUT Informatique pour modéliser un problème industriel réel avec des outils probabilistes. Le surbooking aérien est un problème classique d'optimisation sous contrainte probabiliste.",
+      "Projet de mathématiques appliquées réalisé dans le cadre du BUT Informatique en binôme avec Lucas Charbonnel. L'objectif était de modéliser le comportement des passagers d'une compagnie aérienne, d'évaluer les risques liés au surbooking et de déterminer une stratégie optimale conciliant rentabilité et satisfaction client.",
     objectives: [
       "Modéliser la présentation des passagers par une loi probabiliste adaptée",
       "Implémenter une simulation Monte Carlo pour estimer les probabilités empiriquement",
