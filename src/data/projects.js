@@ -488,9 +488,9 @@ export const projects = [
     type: 'Système',
     category: 'systeme',
     featured: false,
-    title: 'Mini-Shell',
+    title: 'Mini-Shell Unix en C',
     description:
-      "Implémentation d'un shell Unix minimal en C : parsing de commandes, exécution de processus avec fork/exec, redirections stdin/stdout/stderr et gestion des pipes.",
+      "Implémentation d'un mini-shell Unix en C basé sur les appels système POSIX. Le projet couvre le parsing de commandes, la gestion des processus avec fork/exec/wait, les redirections d'entrées/sorties et l'exécution de pipelines entre processus.",
     image: shellGallery[0],
     gallery: shellGallery,
     highlights: [
@@ -499,10 +499,10 @@ export const projects = [
       "Redirections des entrées/sorties (stdin, stdout, stderr) avec dup2()",
       "Gestion des pipes entre processus avec pipe()",
     ],
-    tags: ['C', 'Linux', 'Bash', 'Makefile'],
+    tags: ['C', 'Linux', 'Bash', 'Makefile', 'POSIX'],
     competences: ['realiser', 'optimiser'],
     status: 'Terminé',
-    duration: '3 semaines',
+    duration: 'Semestre 3',
     team: 'Solo',
     context:
       "Projet de programmation système réalisé dans le cadre du BUT Informatique pour comprendre le fonctionnement interne d'un shell Unix. L'implémentation en C bas niveau permet de maîtriser les appels système POSIX (fork, exec, pipe, dup2) qui sont au cœur de tout OS Unix.",
