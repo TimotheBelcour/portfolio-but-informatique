@@ -187,7 +187,6 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <span className="absolute bottom-2.5 right-2.5 w-4 h-4 rounded-full bg-green-400 border-[3px] border-slate-950 shadow-[0_0_10px_rgba(74,222,128,0.7)]" />
               </div>
 
             </div>
