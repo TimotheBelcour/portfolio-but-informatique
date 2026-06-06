@@ -276,9 +276,8 @@ export default function CompetencePage({ competence }) {
                 </div>
               </div>
               <div className={`p-4 rounded-lg border ${colors.border} ${colors.bg}`}>
-                <p className="text-sm text-slate-500 italic leading-relaxed">
-                  Cette section sera complétée avec une analyse personnelle : points forts identifiés,
-                  difficultés rencontrées, axes d'amélioration et objectifs pour la suite de la formation.
+                <p className="text-sm text-slate-300 leading-relaxed">
+                  {competence.analyse}
                 </p>
               </div>
             </div>
