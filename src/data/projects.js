@@ -541,9 +541,9 @@ export const projects = [
     type: 'Algorithmes',
     category: 'algo',
     featured: false,
-    title: 'Cryptographie RSA',
+    title: "Cryptographie RSA & Analyse de l'attaque de Wiener",
     description:
-      "Étude mathématique et implémentation Python de RSA : chiffrement, déchiffrement, et analyse de l'attaque de Wiener sur les petites clés privées via les fractions continues.",
+      "Projet de cryptographie appliquée réalisé en Python autour de l'algorithme RSA. Implémentation complète du chiffrement et du déchiffrement, étude mathématique des fractions continues et analyse de l'attaque de Wiener permettant de retrouver certaines clés privées insuffisamment sécurisées.",
     image: rsaGallery[0],
     gallery: rsaGallery,
     highlights: [
@@ -552,13 +552,13 @@ export const projects = [
       "Calcul des convergents des fractions continues pour l'attaque",
       "Tableau récapitulatif comparant la sécurité selon la taille des clés",
     ],
-    tags: ['Python', 'Cryptographie', 'Algorithmes', 'Mathématiques'],
+    tags: ['Python', 'Cryptographie', 'Algorithmes', 'Mathématiques', 'RSA', 'Cybersécurité'],
     competences: ['realiser', 'optimiser'],
     status: 'Terminé',
-    duration: '2 semaines',
-    team: 'Binôme',
+    duration: 'Semestre 3',
+    team: 'Binôme (Lucas Charbonnel)',
     context:
-      "Projet de mathématiques appliquées et de cryptographie réalisé dans le cadre du BUT Informatique. L'objectif était d'implémenter l'algorithme RSA depuis zéro en Python et d'étudier une attaque connue (Wiener) exploitant les propriétés mathématiques des petites clés privées.",
+      "Projet de mathématiques appliquées et de cryptographie réalisé dans le cadre du BUT Informatique en binôme avec Lucas Charbonnel. L'objectif était d'implémenter l'algorithme RSA depuis zéro en Python, puis d'étudier l'attaque de Wiener afin de comprendre les limites de sécurité liées à certaines configurations de clés privées.",
     objectives: [
       "Comprendre et implémenter l'algorithme RSA (génération de clés, chiffrement, déchiffrement)",
       "Étudier l'attaque de Wiener et ses conditions d'application mathématiques",
