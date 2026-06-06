@@ -44,7 +44,7 @@ function ProfileCard() {
               <div className="relative p-[2px] rounded-full bg-gradient-to-br from-violet-500 via-blue-400 to-violet-600">
                 <div className="w-24 h-24 rounded-full overflow-hidden bg-slate-800">
                   <img
-                    src="/images/profile.png"
+                    src={`${import.meta.env.BASE_URL}images/profile.png`}
                     alt="Timothé Belcour"
                     className="w-full h-full object-cover"
                     draggable={false}
