@@ -114,9 +114,11 @@ const vrarGallery = imgs(
      description, image, gallery, highlights, tags,
      competences, status
    Champs case study (pour ProjectDetail) :
-     duration, team, featuresCount, problemsSolved,
+     duration, team,
      context, objectives, difficulties, solutions,
      learned, result
+   Note : la barre de stats affiche tags.length (technologies)
+   et competences.length (compétences BUT)
    ───────────────────────────────────────────────────────────────── */
 
 export const projects = [
@@ -128,13 +130,13 @@ export const projects = [
   {
     id: 1,
     slug: 'votendo',
-    year: '2024',
+    year: '2025-2026',
     type: 'Web',
     category: 'web',
     featured: true,
     title: 'Votendo',
     description:
-      "Projet web transversal du BUT Informatique : plateforme de vote de jeux vidéo développée en PHP/MySQL, couvrant le développement full-stack, l'administration Apache/HTTPS, l'analyse réseau Wireshark, la conception UML/MCD, la gestion de projet Trello et la communication en anglais.",
+      "Le projet le plus complet que j'ai réalisé au semestre 3 : une plateforme web de vote de jeux vidéo en PHP/MySQL. Il m'a permis de travailler plusieurs aspects différents — développement, base de données, sécurité, administration Apache/HTTPS, analyse réseau, conception UML/MCD, gestion de projet et documentation en anglais.",
     image: votendoGallery[0],
     gallery: votendoGallery,
     highlights: [
@@ -147,12 +149,10 @@ export const projects = [
     tags: ['PHP', 'MySQL', 'HTML/CSS', 'Apache', 'OpenSSL', 'HTTPS'],
     competences: ['realiser', 'optimiser', 'administrer', 'gerer', 'conduire', 'collaborer'],
     status: 'Terminé',
-    duration: '3 semaines',
-    team: 'Solo',
-    featuresCount: 8,
-    problemsSolved: 4,
+    duration: 'Semestre 3',
+    team: 'Binôme (Lucas Charbonnel)',
     context:
-      "Projet fil rouge du semestre 3 du BUT Informatique (SAE3), Votendo est une plateforme web de vote de jeux vidéo conçue et développée de A à Z. Il couvre l'intégralité du cycle : modélisation UML/MCD, développement PHP/MySQL, déploiement Apache/HTTPS, analyse réseau Wireshark, gestion de projet Trello et présentation finale en anglais. C'est le projet qui mobilise le plus de compétences différentes du référentiel BUT Informatique.",
+      "Votendo est le projet fil rouge du semestre 3 du BUT Informatique (SAE3), réalisé en binôme avec Lucas Charbonnel. C'est une plateforme web de vote de jeux vidéo qu'on a conçue et développée du début à la fin : modélisation UML/MCD, développement PHP/MySQL, mise en place du HTTPS sur Apache, analyse réseau avec Wireshark, suivi sur Trello et présentation en anglais. C'est le projet le plus complet que j'ai fait pendant ce semestre, parce qu'il touche à beaucoup d'aspects différents.",
     objectives: [
       "Concevoir la base de données relationnelle (MCD → MLD → SQL) et l'architecture applicative (UML de classes)",
       "Développer les fonctionnalités : inscription, authentification sécurisée, système de rôles et classements",
@@ -164,13 +164,13 @@ export const projects = [
       "Gérer les sessions PHP et le cycle de vie des connexions utilisateur sans framework ni ORM",
       "Configurer Apache avec SSL/TLS, résoudre les avertissements de certificat et forcer HTTP → HTTPS",
       "Protéger contre les injections SQL avec PDO pur, sans couche d'abstraction ni framework",
-      "Implémenter un système de rôles granulaire avec vérification des permissions à chaque route protégée",
+      "Mettre en place un système de rôles avec vérification des permissions sur les pages protégées",
     ],
     solutions: [
       "PDO avec prepared statements pour toutes les requêtes, password_hash() bcrypt pour les mots de passe",
       "Virtual Host Apache avec directives SSLEngine, SSLCertificateFile et Redirect permanent 80 → 443",
       "Capture Wireshark sur l'interface loopback : visualisation du handshake TLS et confirmation du chiffrement",
-      "Middleware PHP centralisé vérifiant le rôle stocké en session en début de chaque page restreinte",
+      "Vérification des rôles et des permissions sur les pages protégées à l'aide des variables de session PHP",
     ],
     learned: [
       "Cycle complet de développement web : de la modélisation UML/MCD au déploiement HTTPS en passant par le code PHP",
@@ -179,7 +179,7 @@ export const projects = [
       "Compétences transversales : gestion de projet Trello, documentation fonctionnelle et communication en anglais",
     ],
     result:
-      "Plateforme web fonctionnelle couvrant l'ensemble du référentiel BUT Informatique : développement PHP/MySQL sécurisé, déploiement HTTPS validé par Wireshark, conception UML/MCD documentée, suivi Trello et présentation en anglais. Projet pivot du portfolio, il démontre la capacité à mener un projet technique de bout en bout en intégrant développement, administration serveur, sécurité et communication.",
+      "Au final, une plateforme web qui fonctionne : développement PHP/MySQL sécurisé, HTTPS vérifié avec Wireshark, conception UML/MCD documentée, suivi sur Trello et présentation en anglais. C'est le projet qui montre le mieux la progression que j'ai eue pendant le BUT, parce qu'il m'a fait travailler à la fois le développement, la base de données, la sécurité, le réseau et la documentation.",
   },
 
   {
@@ -205,8 +205,6 @@ export const projects = [
     status: 'Terminé',
     duration: '4 semaines',
     team: 'Équipe de 3',
-    featuresCount: undefined,
-    problemsSolved: 5,
     context:
       "SAE (Situation d'Apprentissage et d'Évaluation) du 4e semestre du BUT Informatique. L'objectif était d'auditer une application de vote existante (GGVote), d'en estimer la taille et la complexité, puis d'identifier et de documenter les axes d'optimisation prioritaires.",
     objectives: [
@@ -261,8 +259,6 @@ export const projects = [
     status: 'Terminé',
     duration: '2 semaines',
     team: 'Solo',
-    featuresCount: 5,
-    problemsSolved: 3,
     context:
       "Application mobile développée pour découvrir le développement cross-platform avec Flutter et Dart. L'API TMDB (The Movie Database) a été intégrée pour récupérer des données de films et d'acteurs en temps réel, avec une navigation multi-écrans fluide.",
     objectives: [
@@ -316,8 +312,6 @@ export const projects = [
     status: 'Terminé',
     duration: '2 semaines',
     team: 'Solo',
-    featuresCount: 4,
-    problemsSolved: 3,
     context:
       "Projet de découverte de la 3D dans le navigateur réalisé dans le cadre du BUT Informatique. L'objectif était d'implémenter une scène 3D interactive avec Three.js en s'inspirant de l'esthétique colorée et géométrique de l'artiste David Hockney, connu pour ses peintures aux aplats de couleurs vives.",
     objectives: [
@@ -371,8 +365,6 @@ export const projects = [
     status: 'Terminé',
     duration: '1 semaine',
     team: 'Solo',
-    featuresCount: 6,
-    problemsSolved: 4,
     context:
       "Projet DevOps réalisé dans le cadre du BUT Informatique pour maîtriser la conteneurisation avec Docker. L'objectif était de déployer une API REST dans un environnement Docker reproductible, d'orchestrer les services avec Docker Compose et de documenter tous les endpoints avec Postman.",
     objectives: [
@@ -430,8 +422,6 @@ export const projects = [
     status: 'Terminé',
     duration: '2 semaines',
     team: 'Solo',
-    featuresCount: undefined,
-    problemsSolved: 4,
     context:
       "Projet de sécurité réseau réalisé dans le cadre du BUT Informatique pour maîtriser l'administration système et la sécurisation des accès. L'environnement est entièrement virtualisé sous VirtualBox avec plusieurs VMs Linux interconnectées.",
     objectives: [
@@ -485,8 +475,6 @@ export const projects = [
     status: 'Terminé',
     duration: '3 semaines',
     team: 'Solo',
-    featuresCount: 5,
-    problemsSolved: 4,
     context:
       "Projet de programmation système réalisé dans le cadre du BUT Informatique pour comprendre le fonctionnement interne d'un shell Unix. L'implémentation en C bas niveau permet de maîtriser les appels système POSIX (fork, exec, pipe, dup2) qui sont au cœur de tout OS Unix.",
     objectives: [
@@ -540,8 +528,6 @@ export const projects = [
     status: 'Terminé',
     duration: '2 semaines',
     team: 'Binôme',
-    featuresCount: undefined,
-    problemsSolved: 3,
     context:
       "Projet de mathématiques appliquées et de cryptographie réalisé dans le cadre du BUT Informatique. L'objectif était d'implémenter l'algorithme RSA depuis zéro en Python et d'étudier une attaque connue (Wiener) exploitant les propriétés mathématiques des petites clés privées.",
     objectives: [
@@ -595,8 +581,6 @@ export const projects = [
     status: 'Terminé',
     duration: '2 semaines',
     team: 'Binôme',
-    featuresCount: undefined,
-    problemsSolved: 3,
     context:
       "Projet de mathématiques appliquées réalisé dans le cadre du BUT Informatique pour modéliser un problème industriel réel avec des outils probabilistes. Le surbooking aérien est un problème classique d'optimisation sous contrainte probabiliste.",
     objectives: [
@@ -650,8 +634,6 @@ export const projects = [
     status: 'Terminé',
     duration: '2 semaines',
     team: 'Binôme',
-    featuresCount: undefined,
-    problemsSolved: 3,
     context:
       "Projet d'algorithmique et d'optimisation linéaire réalisé dans le cadre du BUT Informatique. L'objectif était d'implémenter l'algorithme du simplexe et d'analyser son comportement sur le polytope de Klee-Minty, connu pour mettre en échec sa complexité polynomiale supposée.",
     objectives: [
@@ -705,8 +687,6 @@ export const projects = [
     status: 'Terminé',
     duration: '2 semaines',
     team: 'Binôme',
-    featuresCount: undefined,
-    problemsSolved: 3,
     context:
       "Projet de théorie des langages formels réalisé dans le cadre du BUT Informatique. L'objectif était d'implémenter en Python les structures et algorithmes fondamentaux de la théorie des automates : DFA, NFA, conversion, et minimisation par l'équivalence de Nerode.",
     objectives: [
@@ -760,8 +740,6 @@ export const projects = [
     status: 'Terminé',
     duration: '3 semaines',
     team: 'Équipe de 3',
-    featuresCount: undefined,
-    problemsSolved: 3,
     context:
       "Travail de recherche réalisé en groupe dans le cadre du BUT Informatique sur les technologies de réalité virtuelle et augmentée. L'objectif était de produire une analyse complète de l'état de l'art, d'identifier les cas d'usage professionnels dans plusieurs secteurs, puis de présenter les conclusions devant la promotion.",
     objectives: [
