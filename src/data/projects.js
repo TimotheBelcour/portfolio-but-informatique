@@ -696,13 +696,13 @@ export const projects = [
   {
     id: 11,
     slug: 'automates-langages',
-    year: '2025',
+    year: '2026',
     type: 'Théorie',
     category: 'algo',
     featured: false,
-    title: 'Automates & Langages',
+    title: 'Automates Finis & Langages Formels',
     description:
-      "Implémentation Python d'automates finis déterministes et non-déterministes : conversion NFA→DFA, minimisation par l'algorithme de Nerode et reconnaissance de langages formels.",
+      "Projet de théorie des langages formels réalisé en Python : implémentation d'automates finis déterministes (DFA) et non-déterministes (NFA), conversion NFA → DFA, minimisation par l'algorithme de Nerode et reconnaissance de langages, avec visualisation graphique des automates via Graphviz.",
     image: automatesGallery[0],
     gallery: automatesGallery,
     highlights: [
@@ -711,13 +711,13 @@ export const projects = [
       "Minimisation d'automates par l'équivalence de Nerode",
       "Visualisation graphique des automates et reconnaissance de langages",
     ],
-    tags: ['Python', 'Automates', 'Algorithmes', 'Théorie'],
+    tags: ['Python', 'Graphviz', 'Automates', 'Algorithmes', 'Langages formels'],
     competences: ['realiser', 'optimiser'],
     status: 'Terminé',
-    duration: '2 semaines',
-    team: 'Binôme',
+    duration: 'Semestre 4',
+    team: 'Binôme (Robin Biget)',
     context:
-      "Projet de théorie des langages formels réalisé dans le cadre du BUT Informatique. L'objectif était d'implémenter en Python les structures et algorithmes fondamentaux de la théorie des automates : DFA, NFA, conversion, et minimisation par l'équivalence de Nerode.",
+      "Projet de théorie des langages formels réalisé dans le cadre du BUT Informatique en binôme avec Robin Biget. L'objectif était d'implémenter en Python, depuis zéro, les structures et algorithmes fondamentaux de la théorie des automates : DFA, NFA, conversion par sous-ensembles et minimisation par l'équivalence de Nerode.",
     objectives: [
       "Représenter formellement un automate fini (états, alphabet, transitions, états finaux)",
       "Implémenter la conversion NFA → DFA par la méthode des sous-ensembles",
