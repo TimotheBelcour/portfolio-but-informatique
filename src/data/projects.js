@@ -749,28 +749,28 @@ export const projects = [
   {
     id: 12,
     slug: 'vr-ar',
-    year: '2025',
+    year: '2026',
     type: 'Recherche',
     category: 'recherche',
     featured: false,
-    title: 'VR/AR — Recherche',
+    title: 'VR, AR & MR — Veille et Analyse Technologique',
     description:
-      "Travail de recherche approfondi en équipe sur les technologies VR et AR : état de l'art, cas d'usage professionnels (santé, industrie, jeu vidéo) et présentation orale devant la promotion.",
+      "Travail de veille et d'analyse technologique réalisé en équipe sur les technologies immersives — réalité virtuelle (VR), augmentée (AR) et mixte (MR). État de l'art, comparaison des technologies, identification des usages professionnels (santé, industrie, jeu vidéo) et restitution lors d'une présentation orale devant la promotion.",
     image: vrarGallery[0],
     gallery: vrarGallery,
     highlights: [
       "Analyse comparative des technologies VR, AR et MR (réalité mixte)",
       "Étude des applications professionnelles dans la santé, l'industrie et le jeu vidéo",
-      "Support de présentation de 25 slides structuré et professionnel",
+      "Support de présentation de 12 slides structuré et professionnel",
       "Présentation orale avec session de questions-réponses devant la promotion",
     ],
-    tags: ['VR', 'AR', 'Recherche', 'Présentation'],
+    tags: ['VR', 'AR', 'MR', 'Veille technologique', 'Communication'],
     competences: ['conduire', 'collaborer'],
     status: 'Terminé',
-    duration: '3 semaines',
-    team: 'Équipe de 3',
+    duration: 'Semestre 4',
+    team: 'Binôme (Robin Biget)',
     context:
-      "Travail de recherche réalisé en groupe dans le cadre du BUT Informatique sur les technologies de réalité virtuelle et augmentée. L'objectif était de produire une analyse complète de l'état de l'art, d'identifier les cas d'usage professionnels dans plusieurs secteurs, puis de présenter les conclusions devant la promotion.",
+      "Travail de recherche et de veille technologique réalisé en binôme dans le cadre du BUT Informatique sur les technologies immersives (VR, AR, MR). L'objectif était de produire une analyse complète de l'état de l'art, de comparer les technologies, d'identifier leurs usages professionnels dans plusieurs secteurs, puis de présenter et défendre les conclusions à l'oral devant la promotion.",
     objectives: [
       "Analyser l'état de l'art des technologies VR, AR et MR (réalité mixte)",
       "Identifier les cas d'usage professionnels dans la santé, l'industrie et le jeu vidéo",
@@ -796,7 +796,7 @@ export const projects = [
       "Vision prospective des technologies émergentes et de leurs enjeux professionnels",
     ],
     result:
-      "Support de présentation complet (25 slides) couvrant les technologies VR/AR/MR, leurs applications sectorielles et leurs perspectives d'avenir. La soutenance devant la promotion a inclus une session de questions-réponses. Le projet a développé des compétences transversales en recherche, communication et travail d'équipe.",
+      "Support de présentation complet (12 slides) couvrant les technologies VR/AR/MR, leurs applications sectorielles et leurs perspectives d'avenir. La soutenance devant la promotion a inclus une session de questions-réponses. Le projet a développé des compétences transversales en recherche, communication et travail d'équipe.",
   },
 ]
 
