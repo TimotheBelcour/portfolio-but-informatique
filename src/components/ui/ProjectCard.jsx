@@ -25,12 +25,27 @@ export default function ProjectCard({ project }) {
 
       {/* Image */}
       <div className="relative aspect-video bg-slate-800 overflow-hidden">
-        <img
-          src={project.image}
-          alt={`Capture d'écran du projet ${project.title}`}
-          className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.05]"
-          loading="lazy"
-        />
+        {project.image ? (
+          <img
+            src={project.image}
+            alt={`Capture d'écran du projet ${project.title}`}
+            className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+            loading="lazy"
+          />
+        ) : (
+          /* Pas de capture disponible (projet sous confidentialité) */
+          <div
+            className="w-full h-full flex items-center justify-center"
+            style={{
+              background:
+                'radial-gradient(ellipse 80% 90% at 30% 20%, rgba(139,92,246,0.20) 0%, transparent 70%), linear-gradient(135deg, #131c31 0%, #0f172a 100%)',
+            }}
+          >
+            <span className="text-5xl font-bold text-slate-100/10 tracking-tight select-none">
+              {project.title.charAt(0)}
+            </span>
+          </div>
+        )}
 
         {/* Gradient overlay renforcé bas */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/20 to-transparent" />

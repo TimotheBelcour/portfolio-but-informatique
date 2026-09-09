@@ -64,9 +64,9 @@ function ProjectNavCard({ project: p, direction }) {
       to={`/projects/${p.slug}`}
       className="group flex items-stretch bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-violet-500/30 hover:shadow-[0_4px_24px_rgba(139,92,246,0.1)] hover:-translate-y-0.5 transition-all duration-300"
     >
-      {isPrev && (
+      {isPrev && p.image && (
         <div className="w-20 shrink-0 overflow-hidden">
-          <img src={p.image} alt={p.title} className="w-full h-full object-cover brightness-50 group-hover:brightness-75 group-hover:scale-105 transition-all duration-300" />
+          <img src={p.image} alt={p.title} loading="lazy" decoding="async" className="w-full h-full object-cover brightness-50 group-hover:brightness-75 group-hover:scale-105 transition-all duration-300" />
         </div>
       )}
       <div className={`flex-1 flex flex-col justify-center gap-1 p-4 min-w-0 ${!isPrev ? 'items-end text-right' : ''}`}>
@@ -88,9 +88,9 @@ function ProjectNavCard({ project: p, direction }) {
           <span className="text-[10px] font-mono text-slate-600 uppercase tracking-wider">{p.type} · {p.year}</span>
         )}
       </div>
-      {!isPrev && (
+      {!isPrev && p.image && (
         <div className="w-20 shrink-0 overflow-hidden">
-          <img src={p.image} alt={p.title} className="w-full h-full object-cover brightness-50 group-hover:brightness-75 group-hover:scale-105 transition-all duration-300" />
+          <img src={p.image} alt={p.title} loading="lazy" decoding="async" className="w-full h-full object-cover brightness-50 group-hover:brightness-75 group-hover:scale-105 transition-all duration-300" />
         </div>
       )}
     </Link>
@@ -110,6 +110,7 @@ export default function ProjectDetail() {
   const idx         = projects.findIndex((p) => p.slug === slug)
   const prevProject = projects[idx - 1]
   const nextProject = projects[idx + 1]
+  const hasImages   = project.gallery && project.gallery.length > 0
   const hasGallery  = project.gallery && project.gallery.length > 1
 
   const metaStats = [
@@ -156,7 +157,7 @@ export default function ProjectDetail() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
 
       {/* ── Lightbox ──────────────────────────────────────────── */}
-      {lightboxOpen && (
+      {lightboxOpen && hasImages && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/96 backdrop-blur-md p-4 sm:p-10"
           onClick={() => setLightboxOpen(false)}
@@ -257,6 +258,7 @@ export default function ProjectDetail() {
         </Reveal>
 
         {/* ════ Galerie ════════════════════════════════════════ */}
+        {hasImages && (
         <Reveal delay={80}>
           <div className="space-y-3">
             {/* Image principale — zoom au hover, lightbox au clic */}
@@ -323,13 +325,26 @@ export default function ProjectDetail() {
                         : 'opacity-50 hover:opacity-75 hover:scale-[1.02]'
                     }`}
                   >
-                    <img src={img} alt={`Miniature ${i + 1}`} className="w-full h-full object-cover" />
+                    <img src={img} alt={`Miniature ${i + 1}`} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                   </button>
                 ))}
               </div>
             )}
           </div>
         </Reveal>
+        )}
+
+        {/* ════ Mention de confidentialité (projet en entreprise) ══ */}
+        {project.confidential && (
+          <Reveal delay={70}>
+            <div className="flex items-start gap-3 rounded-xl border border-slate-700/60 bg-slate-900/70 px-5 py-4">
+              <svg className="w-5 h-5 shrink-0 text-slate-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+              </svg>
+              <p className="text-sm text-slate-400 leading-relaxed">{project.confidential}</p>
+            </div>
+          </Reveal>
+        )}
 
         {/* ════ Barre de stats crédibles ════════════════════════ */}
         <Reveal delay={60}>

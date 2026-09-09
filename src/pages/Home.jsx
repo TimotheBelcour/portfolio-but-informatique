@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { competences } from '../data/competences'
+import { profile, stage } from '../data/profile'
 import Reveal from '../components/ui/Reveal'
 
 /* ── Constantes ────────────────────────────────────────────── */
@@ -24,12 +25,12 @@ const cardHover = {
 }
 
 const stats = [
-  { value: '12',   label: 'Projets réalisés'  },
-  { value: '6',    label: 'Compétences BUT'   },
-  { value: '2ème', label: 'année BUT Info'    },
+  { value: '13',   label: 'Projets réalisés'    },
+  { value: '6',    label: 'Compétences BUT'     },
+  { value: '3',    label: 'mois chez VELUX'     },
 ]
 
-const techStack = ['React', 'PHP', 'Docker', 'Flutter', 'Python', 'SQL']
+const techStack = ['JavaScript', 'React', 'PHP', 'Docker', 'Node-RED', 'SQL']
 
 /* ── Carte flottante autour de la photo (desktop only) ─────── */
 
@@ -48,6 +49,52 @@ function FloatingCard({ className, letter, label, letterClass, borderColor, bgCo
       </div>
       <span className="text-xs text-slate-200 font-semibold whitespace-nowrap">{label}</span>
     </div>
+  )
+}
+
+/* ── Bandeau recherche de stage ─────────────────────────────── */
+
+function StageBanner() {
+  if (!stage.active) return null
+
+  return (
+    <Reveal>
+      <div className="relative overflow-hidden rounded-2xl border border-violet-500/25 bg-slate-900/60 p-6 sm:p-7">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(ellipse 70% 120% at 0% 50%, rgba(139,92,246,0.16) 0%, transparent 70%)',
+          }}
+        />
+        <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="space-y-2.5">
+            <div className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-widest text-violet-300">
+              <span className="relative flex w-2 h-2">
+                <span className="absolute inline-flex w-full h-full rounded-full bg-violet-400 opacity-70 animate-ping" />
+                <span className="relative inline-flex w-2 h-2 rounded-full bg-violet-400" />
+              </span>
+              {stage.label}
+            </div>
+            <p className="text-lg sm:text-xl font-semibold text-slate-100 leading-snug">
+              Stage de {stage.duration} en {stage.domaine.toLowerCase()}
+              <span className="text-violet-400"> — {stage.period}</span>
+            </p>
+            <p className="text-sm text-slate-400">{stage.mobilite}</p>
+          </div>
+
+          <a
+            href={`mailto:${profile.email}?subject=Proposition%20de%20stage%20—%20mars%202027`}
+            className="btn-glow inline-flex shrink-0 items-center justify-center gap-2 px-5 py-3 bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold rounded-xl transition-colors duration-200"
+          >
+            Proposer un stage
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </Reveal>
   )
 }
 
@@ -79,7 +126,7 @@ export default function Home() {
 
             <div className="fade-in inline-flex items-center gap-2 text-xs text-slate-400 bg-slate-900 border border-slate-700/70 rounded-full px-4 py-1.5 w-fit">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-              BUT Informatique — 2ème année
+              BUT Informatique — {profile.year}
             </div>
 
             <div className="space-y-2 fade-in-up delay-100">
@@ -100,12 +147,11 @@ export default function Home() {
             </div>
 
             <p className="text-sm sm:text-base lg:text-lg text-slate-400 leading-relaxed max-w-lg fade-in-up delay-200">
-              Étudiant à l'IUT de Saint-Dié-des-Vosges, j'ai créé ce portfolio pour présenter
-              mes projets, mes apprentissages et l'évolution de mes compétences tout au long
-              du BUT Informatique. Curieux des nouvelles technologies, particulièrement de
-              l'intelligence artificielle et de l'univers du jeu vidéo, j'apprends
-              principalement à travers la pratique et les projets concrets réalisés pendant
-              ma formation.
+              Étudiant en 3ème année de BUT Informatique à l'IUT de Saint-Dié-des-Vosges.
+              Après un premier stage de développement en environnement industriel chez VELUX,
+              au sein d'une équipe IIoT internationale, je recherche un stage de 14 semaines
+              à partir de mars 2027. Ce portfolio réunit mes projets, mes apprentissages et
+              l'évolution de mes compétences tout au long de la formation.
             </p>
 
             {/* Statistiques rapides */}
@@ -153,8 +199,17 @@ export default function Home() {
                 to="/about"
                 className="inline-flex items-center gap-2 px-6 py-3 text-slate-200 text-sm font-medium rounded-xl border border-slate-600/70 hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-200 active:scale-[0.97]"
               >
-                À propos de moi
+                Mon parcours
               </Link>
+              <a
+                href={`mailto:${profile.email}`}
+                className="inline-flex items-center gap-2 px-6 py-3 text-slate-200 text-sm font-medium rounded-xl border border-slate-600/70 hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-200 active:scale-[0.97]"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+                Me contacter
+              </a>
             </div>
           </div>
 
@@ -180,7 +235,7 @@ export default function Home() {
                 <div className="relative p-[3px] rounded-full bg-gradient-to-br from-violet-400 via-blue-400 to-violet-600">
                   <div className="w-44 h-44 sm:w-52 sm:h-52 lg:w-56 lg:h-56 rounded-full overflow-hidden bg-slate-800">
                     <img
-                      src={`${import.meta.env.BASE_URL}images/profile-small.png`}
+                      src={`${import.meta.env.BASE_URL}images/profile-small.webp`}
                       alt="Timothé Belcour"
                       className="w-full h-full object-cover"
                       draggable={false}
@@ -194,6 +249,9 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* ════ Recherche de stage ═══════════════════════════════ */}
+      <StageBanner />
 
       {/* ════ Compétences ══════════════════════════════════════ */}
       <section className="space-y-8">

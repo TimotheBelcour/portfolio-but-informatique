@@ -137,6 +137,65 @@ export const projects = [
   ══════════════════════════════════════════════════ */
 
   {
+    id: 13,
+    slug: 'velux-node-red-vip',
+    year: '2026',
+    type: 'Stage',
+    category: 'pro',
+    featured: true,
+    title: 'Node-RED — Package de nœuds pour l\'injection de télégrammes industriels',
+    description:
+      "Stage de 8 semaines chez VELUX, au sein de l'équipe IIoT. Conception et développement d'un package de trois nœuds Node-RED permettant d'envoyer des messages normalisés vers les machines de production via MQTT. Avant ce projet, chaque envoi demandait de réassembler à la main une quinzaine de blocs et d'écrire du JavaScript, ce qui réservait l'outil aux membres expérimentés de l'équipe.",
+    gallery: [],
+    highlights: [
+      "Envoi d'un télégramme : de 13 à 17 blocs assemblés à la main réduits à 1 nœud à configurer",
+      "Code JavaScript à écrire par l'utilisateur : de 2 à 4 blocs de fonction réduits à aucun",
+      "Gestion des erreurs : de rien du tout à 7 situations distinguées et documentées",
+      "Fiabilité : la temporisation fixe de 500 ms remplacée par un abonnement établi au démarrage",
+      "Documentation : 5 pages publiées sur le portail interne et 3 aides intégrées à l'éditeur",
+      "Validation : 18 télégrammes testés, 10 validés complètement",
+    ],
+    tags: ['JavaScript', 'Node-RED', 'MQTT', 'JSON', 'Docker', 'Git', 'GitHub Actions', 'Docusaurus'],
+    competences: ['realiser', 'optimiser', 'administrer', 'conduire', 'collaborer'],
+    status: 'Terminé',
+    duration: '8 semaines',
+    team: 'Équipe IIoT internationale',
+    context:
+      "Premier stage de développement, réalisé au VELUX Technology Centre de Chemaudin-et-Vaux au sein de l'équipe IIoT (VIP-Core), du 15 juin au 7 août 2026. L'équipe travaille sur les objets connectés industriels du groupe. Ma mission portait sur un besoin concret et répétitif : envoyer un télégramme normalisé vers une machine de production n'était pas un simple envoi de message, mais un échange complet en quatre temps — s'abonner aux adresses de réponse, publier la question, trier les réponses reçues, puis en extraire la valeur utile. Fait à la main, cet enchaînement produisait un assemblage d'une quinzaine de blocs à reconstruire à chaque usage.",
+    objectives: [
+      "Réduire le travail de mise en œuvre d'un envoi de télégramme",
+      "Abaisser le niveau requis pour qu'un membre non spécialiste de MQTT puisse envoyer un télégramme",
+      "Fiabiliser les échanges par une vraie gestion des erreurs et des délais d'attente",
+      "Assurer la pérennité du résultat : distribution sur l'infrastructure existante et documentation permettant à quelqu'un d'autre de reprendre le code",
+    ],
+    difficulties: [
+      "Une refonte à mi-parcours : la première version stockait les valeurs dans le formulaire de configuration, donc figées. Le nœud renvoyait toujours le même message alors que l'usage réel demandait des valeurs changeant à chaque envoi — le code respectait la spécification mais manquait son but",
+      "Un faux positif difficile à détecter : certains envois retournaient un succès alors que le résultat métier n'était pas le bon, la condition de succès étant trop permissive",
+      "Un déploiement qui semblait réussi mais dont le composant restait invisible : la cause était procédurale et non technique, chaque étape s'exécutant correctement sur une entrée périmée",
+      "Apprendre Node-RED en même temps que développer l'outil, sans le connaître au départ",
+    ],
+    solutions: [
+      "Séparation de la structure du télégramme, conservée dans la configuration, et des valeurs, fournies à l'exécution par le message entrant — ce qui rend le composant utilisable dans une chaîne automatique",
+      "Distinction explicite entre accusé de réception et validité du résultat métier, avec formalisation des succès partiels",
+      "Registre interne des requêtes en cours, indexé par identifiant, permettant à un même nœud de traiter plusieurs échanges simultanés sans confusion",
+      "Abonnement établi une fois au démarrage du nœud plutôt qu'à chaque envoi, supprimant la temporisation fixe et l'hypothèse fragile qu'elle masquait",
+      "Vérification des valeurs par rapport à la définition du télégramme avant tout envoi, avec un message indiquant le champ en cause",
+      "Documentation à trois niveaux : aide intégrée à l'éditeur, documentation technique du dépôt, site publié sur le portail interne avec une page de maintenance",
+    ],
+    learned: [
+      "Développer dans un existant qu'on ne maîtrise pas entièrement : la vraie différence avec un projet scolaire, où l'on connaît tout le périmètre",
+      "Travailler en méthode agile : les points quotidiens, que je voyais d'abord comme du temps perdu, sont ce qui a permis de repérer à mi-parcours que ma conception s'écartait de l'objectif",
+      "Montrer son travail régulièrement plutôt que d'attendre la fin : les trois corrections importantes du projet sont venues d'une relecture, pas d'une erreur constatée à l'exécution",
+      "Travailler et communiquer en anglais au quotidien, à l'oral comme à l'écrit — le domaine où j'ai le plus progressé, et celui qui m'inquiétait le plus en arrivant",
+      "Concevoir pour la maintenance : un composant utilisable huit semaines puis abandonné faute de documentation n'aurait servi à rien",
+    ],
+    result:
+      "Le package a été publié sur le dépôt interne, déployé sur l'environnement de test et validé en conditions réelles, accompagné de 5 pages de documentation et d'une aide intégrée à chaque nœud. Envoyer un télégramme ne demande plus qu'un nœud correctement paramétré, là où il fallait auparavant assembler entre 13 et 17 blocs et écrire du JavaScript. Trois limites restent identifiées et documentées : certaines familles de télégrammes hors périmètre, l'indication d'une réponse de routage laissée à l'utilisateur, et une validation reposant sur des tests manuels — la première dette technique du projet. Le travail a été présenté en revue de sprint devant l'équipe, avec démonstration en direct.",
+    confidential:
+      "Projet réalisé en entreprise : les captures d'écran, le code et les détails d'infrastructure ne sont pas publiés.",
+  },
+
+  {
     id: 1,
     slug: 'votendo',
     year: '2025-2026',
