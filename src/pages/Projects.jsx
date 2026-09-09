@@ -6,6 +6,7 @@ import Reveal from '../components/ui/Reveal'
 /* ── Labels lisibles pour chaque catégorie ─────────────────────── */
 const CATEGORY_LABELS = {
   all:       'Tous',
+  pro:       'Professionnel',
   web:       'Web',
   mobile:    'Mobile',
   devops:    'DevOps',
@@ -20,6 +21,11 @@ const CATEGORY_ICONS = {
   all: (
     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+    </svg>
+  ),
+  pro: (
+    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.073a2.25 2.25 0 01-1.632 2.163l-1.32.377a9.797 9.797 0 01-5.396 0l-1.32-.377a2.25 2.25 0 01-1.632-2.163V14.15M3.75 9.349v4.873c0 .98.626 1.848 1.555 2.156l3.196 1.064M3.75 9.349a2.25 2.25 0 01.673-1.605l3.75-3.75a2.25 2.25 0 011.591-.659h4.472c.597 0 1.169.237 1.591.659l3.75 3.75a2.25 2.25 0 01.673 1.605m-16.5 0h16.5" />
     </svg>
   ),
   web: (
@@ -60,7 +66,7 @@ const CATEGORY_ICONS = {
 }
 
 /* ── Ordre des onglets ─────────────────────────────────────────── */
-const TAB_ORDER = ['all', 'web', 'mobile', 'devops', 'algo', 'systeme', 'reseau', 'recherche']
+const TAB_ORDER = ['all', 'pro', 'web', 'mobile', 'devops', 'algo', 'systeme', 'reseau', 'recherche']
 
 /* ── Sous-titre de section ─────────────────────────────────────── */
 function SectionDivider({ title, count }) {
@@ -98,7 +104,7 @@ export default function Projects() {
       <Reveal as="header" className="space-y-3">
         <h1 className="text-4xl font-bold text-slate-100">Projets</h1>
         <p className="text-slate-500 text-lg leading-relaxed">
-          Réalisations académiques du BUT Informatique — {projects.length} projets
+          Projets du BUT Informatique et stage en entreprise — {projects.length} projets
         </p>
       </Reveal>
 

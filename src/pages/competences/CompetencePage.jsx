@@ -142,7 +142,7 @@ export default function CompetencePage({ competence }) {
           </span>
           <span className="flex items-center gap-1.5 text-xs text-slate-500 bg-slate-800/60 border border-slate-700/50 px-3 py-1.5 rounded-lg">
             <span className="w-1.5 h-1.5 rounded-full bg-slate-600" />
-            2ème année BUT
+            Bilan 2ème année BUT
           </span>
         </div>
       </Reveal>
@@ -347,7 +347,7 @@ export default function CompetencePage({ competence }) {
                 <dd className={`font-mono font-semibold ${colors.accent}`}>C{String(competence.id).padStart(2, '0')}</dd>
               </div>
               <div className="flex items-center justify-between text-sm">
-                <dt className="text-slate-500">Année</dt>
+                <dt className="text-slate-500">Bilan</dt>
                 <dd className="text-slate-300">BUT 2ème année</dd>
               </div>
               <div className="flex items-center justify-between text-sm">
