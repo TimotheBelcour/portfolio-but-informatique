@@ -5,6 +5,17 @@ import { imgs } from './projectImages.js'
    Les noms correspondent aux fichiers dans src/assets/projects/[slug]/
    ───────────────────────────────────────────────────────────────── */
 
+const veluxGallery = imgs(
+  'velux-node-red-vip',
+  // ── Avant / après : le cœur du projet ─────────────
+  'avant-assemblage-manuel',
+  'apres-noeud-unique',
+  'configuration-injection',
+  // ── Schémas d'architecture ────────────────────────
+  'architecture-echange',
+  'sequence-echange',
+)
+
 const votendoGallery = imgs(
   'votendo',
   // ── Interface utilisateur ──────────────────────────
@@ -146,7 +157,8 @@ export const projects = [
     title: 'Node-RED — Package de nœuds pour l\'injection de télégrammes industriels',
     description:
       "Stage de 8 semaines chez VELUX, au sein de l'équipe IIoT. Conception et développement d'un package de trois nœuds Node-RED permettant d'envoyer des messages normalisés vers les machines de production via MQTT. Avant ce projet, chaque envoi demandait de réassembler à la main une quinzaine de blocs et d'écrire du JavaScript, ce qui réservait l'outil aux membres expérimentés de l'équipe.",
-    gallery: [],
+    image: veluxGallery[0],
+    gallery: veluxGallery,
     highlights: [
       "Envoi d'un télégramme : de 13 à 17 blocs assemblés à la main réduits à 1 nœud à configurer",
       "Code JavaScript à écrire par l'utilisateur : de 2 à 4 blocs de fonction réduits à aucun",
@@ -192,7 +204,7 @@ export const projects = [
     result:
       "Le package a été publié sur le dépôt interne, déployé sur l'environnement de test et validé en conditions réelles, accompagné de 5 pages de documentation et d'une aide intégrée à chaque nœud. Envoyer un télégramme ne demande plus qu'un nœud correctement paramétré, là où il fallait auparavant assembler entre 13 et 17 blocs et écrire du JavaScript. Trois limites restent identifiées et documentées : certaines familles de télégrammes hors périmètre, l'indication d'une réponse de routage laissée à l'utilisateur, et une validation reposant sur des tests manuels — la première dette technique du projet. Le travail a été présenté en revue de sprint devant l'équipe, avec démonstration en direct.",
     confidential:
-      "Projet réalisé en entreprise : les captures d'écran, le code et les détails d'infrastructure ne sont pas publiés.",
+      "Projet réalisé en entreprise : les captures ont été sélectionnées et recadrées pour ne montrer aucune donnée d'infrastructure. Le code source et les formats de messages internes ne sont pas publiés.",
   },
 
   {

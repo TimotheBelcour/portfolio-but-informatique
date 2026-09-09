@@ -14,6 +14,8 @@ export const profile = {
   email: 'timothebelcour@outlook.fr',
   github: 'https://github.com/TimotheBelcour',
   githubHandle: 'TimotheBelcour',
+  linkedin: 'https://www.linkedin.com/in/timoth%C3%A9-belcour-35654932b/',
+  linkedinLabel: 'linkedin.com/in/timothé-belcour',
 }
 
 /* Recherche de stage — affichée en bandeau sur l'accueil */
