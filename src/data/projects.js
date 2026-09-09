@@ -141,6 +141,18 @@ const vrarGallery = imgs(
    et competences.length (compétences BUT)
    ───────────────────────────────────────────────────────────────── */
 
+/* ─────────────────────────────────────────────────────────────────
+   Périodes du parcours — utilisées pour regrouper les projets
+   chronologiquement (page Projets, portfolio de fin d'année).
+   ───────────────────────────────────────────────────────────────── */
+
+export const PERIODES = {
+  but1:  { id: 'but1',  label: '1ère année',  ordre: 1 },
+  but2:  { id: 'but2',  label: '2ème année',  ordre: 2 },
+  stage: { id: 'stage', label: 'Stage',       ordre: 3 },
+  but3:  { id: 'but3',  label: '3ème année',  ordre: 4 },
+}
+
 export const projects = [
 
   /* ══════════════════════════════════════════════════
@@ -151,6 +163,7 @@ export const projects = [
     id: 13,
     slug: 'velux-node-red-vip',
     year: '2026',
+    periode: 'stage',
     type: 'Stage',
     category: 'pro',
     featured: true,
@@ -211,6 +224,7 @@ export const projects = [
     id: 1,
     slug: 'votendo',
     year: '2025-2026',
+    periode: 'but2',
     type: 'Web',
     category: 'web',
     featured: true,
@@ -266,6 +280,7 @@ export const projects = [
     id: 2,
     slug: 'sae4-ggvote-audit',
     year: '2026',
+    periode: 'but2',
     type: 'Audit',
     category: 'devops',
     featured: true,
@@ -329,6 +344,7 @@ export const projects = [
     id: 3,
     slug: 'flutter-films',
     year: '2026',
+    periode: 'but2',
     type: 'Mobile',
     category: 'mobile',
     featured: true,
@@ -385,6 +401,7 @@ export const projects = [
     id: 4,
     slug: 'threejs-hockney',
     year: '2026',
+    periode: 'but2',
     type: '3D / Web',
     category: 'web',
     featured: true,
@@ -441,6 +458,7 @@ export const projects = [
     id: 5,
     slug: 'docker-api',
     year: '2026',
+    periode: 'but2',
     type: 'Web / IA',
     category: 'web',
     featured: true,
@@ -501,6 +519,7 @@ export const projects = [
     id: 6,
     slug: 'virtualbox-network-security',
     year: '2026',
+    periode: 'but2',
     type: 'Réseau',
     category: 'reseau',
     featured: false,
@@ -556,6 +575,7 @@ export const projects = [
     id: 7,
     slug: 'mini-shell',
     year: '2025',
+    periode: 'but2',
     type: 'Système',
     category: 'systeme',
     featured: false,
@@ -609,6 +629,7 @@ export const projects = [
     id: 8,
     slug: 'cryptographie-rsa',
     year: '2025',
+    periode: 'but2',
     type: 'Algorithmes',
     category: 'algo',
     featured: false,
@@ -662,6 +683,7 @@ export const projects = [
     id: 9,
     slug: 'probabilites-surbooking',
     year: '2025',
+    periode: 'but2',
     type: 'Probabilités',
     category: 'algo',
     featured: false,
@@ -715,6 +737,7 @@ export const projects = [
     id: 10,
     slug: 'simplexe-klee-minty',
     year: '2026',
+    periode: 'but2',
     type: 'Optimisation',
     category: 'algo',
     featured: false,
@@ -768,6 +791,7 @@ export const projects = [
     id: 11,
     slug: 'automates-langages',
     year: '2026',
+    periode: 'but2',
     type: 'Théorie',
     category: 'algo',
     featured: false,
@@ -821,6 +845,7 @@ export const projects = [
     id: 12,
     slug: 'vr-ar',
     year: '2026',
+    periode: 'but2',
     type: 'Recherche',
     category: 'recherche',
     featured: false,

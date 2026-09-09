@@ -17,6 +17,7 @@ Il présente mon parcours, mes expériences professionnelles, mes projets acadé
 | Style | Tailwind CSS 4 |
 | Routing | React Router 7 |
 | Langage | JavaScript (JSX) |
+| Tests | Vitest + Testing Library |
 
 ---
 
@@ -108,7 +109,28 @@ npm run preview
 
 # Lancer le linter ESLint
 npm run lint
+
+# Lancer les tests une fois
+npm test
+
+# Relancer les tests à chaque modification
+npm run test:watch
 ```
+
+---
+
+## ✅ Tests
+
+Les tests sont écrits avec [Vitest](https://vitest.dev/) et [Testing Library](https://testing-library.com/).
+Ils portent sur ce qui casse silencieusement — sans message d'erreur, mais avec un effet visible sur le site :
+
+| Fichier | Ce qu'il vérifie |
+|---|---|
+| `src/data/projects.test.js` | Intégrité du catalogue : slugs et identifiants uniques, champs obligatoires, compétences BUT réellement existantes, catégories et périodes connues, galeries complètes |
+| `src/data/competences.test.js` | Les 6 compétences du référentiel : numérotation, champs affichés, couleurs pour lesquelles un style existe, niveau valide, au moins un projet associé |
+| `src/components/ui/ProjectCard.test.jsx` | Rendu d'une carte projet, avec et sans capture d'écran |
+
+Une faute de frappe dans un slug de compétence ne provoque aucune erreur JavaScript : la compétence disparaît simplement de l'affichage. C'est exactement ce que ces tests détectent.
 
 ---
 
@@ -128,6 +150,8 @@ portfolio-but-informatique/
 │   │   │   ├── Badge.jsx    # Tag coloré réutilisable
 │   │   │   └── ProjectCard.jsx
 │   │   └── ScrollToTop.jsx  # Reset scroll à chaque navigation
+│   ├── test/
+│   │   └── setup.js         # Configuration Testing Library
 │   ├── data/
 │   │   ├── competences.js   # Les 6 compétences BUT (slug, critères, couleur)
 │   │   ├── profile.js       # Identité, recherche de stage, expériences, formation
