@@ -8,4 +8,9 @@ export default defineConfig({
     tailwindcss(),
   ],
   base: '/portfolio-but-informatique/',
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './src/test/setup.js',
+  },
 })
