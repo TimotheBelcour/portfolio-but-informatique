@@ -1,7 +1,7 @@
 /**
  * Registre automatique des images de projets.
  *
- * Vite's import.meta.glob charge tous les PNG de src/assets/projects/ en mode
+ * Vite's import.meta.glob charge toutes les images de src/assets/projects/ en mode
  * "eager" (synchrone) lors du build. Chaque image reçoit un hash de contenu
  * dans son nom de fichier — ce qui garantit l'invalidation de cache automatique.
  *
@@ -13,7 +13,7 @@
  * └──────────────────────────────────────────────────────────────────────┘
  */
 
-const modules = import.meta.glob('../assets/projects/**/*.png', { eager: true })
+const modules = import.meta.glob('../assets/projects/**/*.{png,webp}', { eager: true })
 
 /**
  * Construit un registre indexé par slug de projet, puis par nom de fichier.
