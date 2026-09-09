@@ -142,7 +142,7 @@ export default function CompetencePage({ competence }) {
           </span>
           <span className="flex items-center gap-1.5 text-xs text-slate-500 bg-slate-800/60 border border-slate-700/50 px-3 py-1.5 rounded-lg">
             <span className="w-1.5 h-1.5 rounded-full bg-slate-600" />
-            Bilan 2ème année BUT
+            Bilan — entrée en 3ème année
           </span>
         </div>
       </Reveal>
@@ -348,7 +348,7 @@ export default function CompetencePage({ competence }) {
               </div>
               <div className="flex items-center justify-between text-sm">
                 <dt className="text-slate-500">Bilan</dt>
-                <dd className="text-slate-300">BUT 2ème année</dd>
+                <dd className="text-slate-300">Entrée en 3ème année</dd>
               </div>
               <div className="flex items-center justify-between text-sm">
                 <dt className="text-slate-500">Statut</dt>

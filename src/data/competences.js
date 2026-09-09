@@ -20,7 +20,7 @@ export const competences = [
       "Vérifier la conformité des fonctionnalités développées par des tests manuels et des scénarios de validation",
     ],
     analyse:
-      "Au fil des projets du BUT, j'ai appris à partir d'un besoin concret et à produire quelque chose de fonctionnel — une plateforme web, une appli mobile, une scène 3D interactive. J'ai progressé sur la façon de structurer mon code et d'organiser mes projets. Là où je suis encore limité, c'est sur les tests : je vérifie manuellement, mais je n'ai pas encore vraiment de pratique des tests automatisés. L'accessibilité, c'est pareil — je connais le principe mais je n'y consacre pas encore assez d'attention. Pour la suite, j'aimerais mieux poser la conception avant de me lancer dans le code, et commencer à tester de façon plus rigoureuse.",
+      "Au fil des projets du BUT, j'ai appris à partir d'un besoin concret et à produire quelque chose de fonctionnel — une plateforme web, une appli mobile, une scène 3D interactive. J'ai progressé sur la façon de structurer mon code et d'organiser mes projets. Mon stage y a ajouté une dimension que les projets scolaires n'ont pas : développer un composant destiné à d'autres développeurs, dans un système existant que je ne maîtrisais pas entièrement, et le documenter pour qu'il reste utilisable après mon départ. Là où je suis encore limité, c'est sur les tests : je vérifie manuellement, mais je n'ai pas encore vraiment de pratique des tests automatisés — c'était d'ailleurs la limite reconnue de mon travail chez VELUX. L'accessibilité, c'est pareil — je connais le principe mais je n'y consacre pas encore assez d'attention. Pour la suite, j'aimerais mieux poser la conception avant de me lancer dans le code, et commencer à tester de façon plus rigoureuse.",
     niveauScore: 3,
   },
   {
@@ -44,7 +44,7 @@ export const competences = [
       "Évaluer les performances d'une application avec des outils de mesure : profiling SQL, analyse réseau Wireshark",
     ],
     analyse:
-      "J'ai eu l'occasion de travailler sur des algorithmes assez complexes dans plusieurs projets, ce qui m'a aidé à mieux comprendre les questions de performance et de complexité. Sur la sécurité, j'ai mis en pratique quelques techniques concrètes et je commence à avoir de bons réflexes. Ce que je maîtrise moins bien, c'est tout ce qui touche à l'éco-conception et à l'impact des solutions : je sais que ça existe, mais ça reste surtout théorique pour moi. Je dois aussi progresser sur la mesure de performance — je suis plus à l'aise pour identifier un problème que pour le quantifier vraiment.",
+      "J'ai eu l'occasion de travailler sur des algorithmes assez complexes dans plusieurs projets, ce qui m'a aidé à mieux comprendre les questions de performance et de complexité. Sur la sécurité, j'ai mis en pratique quelques techniques concrètes et je commence à avoir de bons réflexes. Ce que je maîtrise moins bien, c'est tout ce qui touche à l'éco-conception et à l'impact des solutions : je sais que ça existe, mais ça reste surtout théorique pour moi. Mon stage m'a fait travailler la fiabilité plus que la performance : remplacer une temporisation fixe qui masquait un problème d'ordre au lieu de le résoudre, et distinguer sept situations d'erreur là où il n'y en avait aucune. La mesure de performance à proprement parler reste un point à travailler — je suis plus à l'aise pour identifier un problème que pour le quantifier vraiment.",
     niveauScore: 2,
   },
   {
@@ -67,7 +67,7 @@ export const competences = [
       "Sécuriser des accès réseau : authentification par clé SSH, port knocking, tunnels chiffrés",
     ],
     analyse:
-      "J'ai eu l'occasion de travailler avec des environnements assez variés — Docker, Linux, Apache, VirtualBox — et j'ai appris à configurer, déployer et sécuriser des services de façon concrète. Je suis plus à l'aise sur la conteneurisation et la configuration HTTPS/SSH. Là où je manque encore de recul, c'est sur les environnements réseau plus complexes et sur la façon de surveiller des systèmes en production. Jusqu'ici j'ai surtout travaillé en local ou en virtuel, donc je n'ai pas encore d'expérience sur de vraies infrastructures. Pour la suite, je veux continuer à pratiquer et mieux comprendre comment ça se passe en conditions réelles.",
+      "J'ai eu l'occasion de travailler avec des environnements assez variés — Docker, Linux, Apache, VirtualBox — et j'ai appris à configurer, déployer et sécuriser des services de façon concrète. Je suis plus à l'aise sur la conteneurisation et la configuration HTTPS/SSH. Là où je manque encore de recul, c'est sur les environnements réseau plus complexes et sur la façon de surveiller des systèmes en production. Mon stage chez VELUX m'a donné un premier contact avec une infrastructure réelle : publication sur un dépôt interne, reconstruction d'une image Docker et déploiement sur un environnement de test. J'y ai surtout appris que la difficulté n'est pas toujours technique — l'incident qui m'a pris le plus de temps venait d'une étape de procédure oubliée, pas d'une erreur de configuration, et aucune étape ne signalait d'erreur. Il me reste à comprendre comment on exploite et surveille ce genre d'environnement dans la durée, ce que huit semaines ne permettent pas de voir.",
     niveauScore: 3,
   },
   {
@@ -115,7 +115,7 @@ export const competences = [
       "Présenter et défendre un projet à l'oral devant un jury ou une promotion, en français et en anglais",
     ],
     analyse:
-      "J'ai appris à formaliser les besoins d'un projet, à écrire un cahier des charges et à planifier avec Trello. J'ai aussi participé à des présentations orales en français et en anglais, ce qui m'a aidé à mieux organiser mes idées. Là où je dois encore progresser, c'est sur l'anticipation : je sous-estime parfois la complexité d'une tâche ou je ne vois pas assez tôt ce qui peut bloquer. J'ai aussi découvert des méthodes d'estimation de projet dans la SAE4, et j'aimerais mieux les maîtriser pour mieux cadrer mes projets à l'avenir.",
+      "J'ai appris à formaliser les besoins d'un projet, à écrire un cahier des charges et à planifier avec Trello. J'ai aussi participé à des présentations orales en français et en anglais, jusqu'à présenter mon travail de stage pendant une cinquantaine de minutes devant l'équipe qui allait l'utiliser. Chez VELUX, j'ai découvert une conduite de projet différente de celle du BUT : pas de planning établi à l'avance, mais des objectifs successifs définis au fur et à mesure, chacun lancé une fois le précédent en état de fonctionner. Là où je dois encore progresser, c'est sur l'anticipation : je sous-estime parfois la complexité d'une tâche ou je ne vois pas assez tôt ce qui peut bloquer. J'ai aussi découvert des méthodes d'estimation de projet dans la SAE4, et j'aimerais mieux les maîtriser pour mieux cadrer mes projets à l'avenir.",
     niveauScore: 2,
   },
   {
@@ -139,7 +139,7 @@ export const competences = [
       "Rendre compte de son activité de manière structurée à différents interlocuteurs (professeurs, jury, promotion)",
     ],
     analyse:
-      "J'ai travaillé en équipe sur plusieurs projets du BUT — avec des rôles répartis, des livrables communs et des présentations à faire ensemble. J'utilise Git régulièrement et j'ai pris l'habitude de rendre compte de mon avancement. Ce que je dois encore améliorer, c'est la façon de communiquer en équipe de manière plus organisée et plus régulière. Je veux aussi mieux comprendre comment fonctionne une équipe informatique dans une vraie entreprise, parce que c'est quelque chose que je n'ai pas encore vraiment vécu.",
+      "J'ai travaillé en équipe sur plusieurs projets du BUT — avec des rôles répartis, des livrables communs et des présentations à faire ensemble. J'utilise Git régulièrement et j'ai pris l'habitude de rendre compte de mon avancement. Mon stage chez VELUX a fait évoluer mon regard sur ce point : intégré à une équipe internationale de cinq personnes dont une seule travaillait en France, j'ai échangé en anglais au quotidien et rendu compte de mon avancement chaque jour. Je voyais d'abord ces points quotidiens comme du temps pris sur le travail ; c'est pourtant en disant à voix haute où j'en étais qu'une erreur de conception a été repérée à mi-parcours, alors que je ne l'avais pas vue seul. Ce que je dois encore améliorer, c'est de solliciter les autres plus tôt, plutôt que de chercher longtemps par moi-même avant de poser une question.",
     niveauScore: 2,
   },
 ]
